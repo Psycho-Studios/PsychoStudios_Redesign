@@ -9,37 +9,55 @@
   <meta name="author" content="">
 
   <title>Psycho Studios</title>
-
+  
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
-  <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+    <!-- Bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+  <!-- font awesome cdn -->
+  <script defer src="https://kit.fontawesome.com/f030b35153.js" crossorigin="anonymous"></script>
+   <!-- Bootstrap JS bundle cdn -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+          crossorigin="anonymous">
+  </script>
 
 </head>
 
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Psycho Studios</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">PsychoStudios</a>
+      <button class="navbar-toggler bg-warning" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navBar" 
+              aria-controls="navBar" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Current Projects</a>
+      
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav">
+          <li class="nav-item mb-2 px-3">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Current Projects</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+          <li class="nav-item px-3">
+            <a class="nav-link  js-scroll-trigger" href="#about">About</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+          <li class="nav-item px-3" >
+            <a class="nav-link  js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -47,45 +65,28 @@
   </nav>
 
   <!-- Masthead -->
-  <header class="masthead bg-primary text-white text-center">
+  <header class="masthead text-white text-center">
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="img/portfolio/logo.png" alt="">
+      <img class="masthead-avatar mb-4" src="images/newpsychostudios.png" alt="psycho studios logo ">
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Psycho Studios</h1>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
+      <h1 class="masthead-heading text-uppercase my-5">Psycho Studios</h1>
+        <p>"Where creativity meets enginuity"</p>
 
       <!-- Masthead Subheading -->
-
     </div>
   </header>
 
   <!-- Portfolio Section -->
-  <section class="page-section portfolio" id="portfolio">
+  <section class="page-section bg-white portfolio" id="portfolio">
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Current Projects</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Current Projects</h2>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
-
+ 
       <!-- Portfolio Grid Items -->
       <div class="row">
 
@@ -97,11 +98,11 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/Screenshot1.png" alt="">
+            <img class="img-fluid" src="images/Screenshot1.png" alt="">
           </div>
         </div>
 
-        <!-- Portfolio Item 2 
+        <!-- Portfolio Item 2  -->
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -109,10 +110,10 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+            <img class="img-fluid" src="images/ComingSoon.png" alt="">
           </div>
         </div>
-      -->
+     
         <!-- Portfolio Item 3 
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
@@ -131,20 +132,12 @@
   </section>
 
   <!-- About Section -->
-  <section class="page-section bg-primary text-white mb-0" id="about">
+  <section class="about-section page-section text-white mb-0" id="about">
     <div class="container">
 
       <!-- About Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
 
       <!-- About Section Content -->
       <div class="row">
@@ -160,58 +153,75 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section class="page-section bg-white" id="contact">
     <div class="container">
 
       <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Us</h2>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
 
       <!-- Contact Section Form -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- To configure the contact form email address, go to and index.js the email address in the PHP file on line 19. -->
           <form name="sentMessage" id="contactForm" novalidate="novalidate" action="http://www.psychostudios.net:8080/emailDrAcoustic" method="POST">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
-                <input class="form-control" id="name" name="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                <input class="form-control" 
+                        id="name" 
+                        name="name" 
+                        type="text" 
+                        placeholder="Name" 
+                        required="required" 
+                        data-validation-required-message="Please enter your name." 
+                        required autofocus>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Email Address</label>
-                <input class="form-control" id="email" name="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                <input class="form-control" 
+                        id="email" name="email" 
+                        type="email" 
+                        placeholder="Email Address" 
+                        required="required" 
+                        data-validation-required-message="Please enter your email address.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Phone Number</label>
-                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                <input class="form-control" 
+                        id="phone" 
+                        name="phone" 
+                        type="tel" 
+                        placeholder="Phone Number" 
+                        required="required" 
+                        data-validation-required-message="Please enter your phone number.">    
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>
-                <textarea class="form-control" id="message" rows="5" name="message" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                <textarea class="form-control" 
+                          id="message" 
+                          rows="5" 
+                          name="message" 
+                          placeholder="Message" 
+                          required="required" 
+                          data-validation-required-message="Please enter a message.">
+                </textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button>
             </div>
           </form>
         </div>
@@ -227,19 +237,37 @@
 
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">We in the "D", baby!
-            <br>Detroit, MI</p>
+          <h4 class="text-white  mb-4">Location</h4>
+          <p class="lead mb-0"> Metro Detrot Area
+            <br>Michigan</p>
         </div>
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/JChrite">
-            <i class="fab fa-fw fa-twitter"></i>
+          <h4 class="text-uppercase mb-4">Connect with Us</h4>
+          <a class="btn btn-outline-dark btn-social mx-1" 
+             href="https://twitter.com/JChrite" 
+             target="_blank">
+            <i class="fab fa-fw fa-twitter">
+            </i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jeshawn-chrite">
-            <i class="fab fa-fw fa-linkedin-in"></i>
+          <a class="btn btn-outline-dark btn-social mx-1" 
+             href="https://www.linkedin.com/in/jeshawn-chrite"  
+             target="_blank">
+            <i class="fab fa-fw fa-linkedin-in">
+            </i>
+          </a>
+          <a class="btn btn-outline-dark  btn-social mx-1" 
+             href="https://instagram.com/" 
+             target="_blank">
+            <i class="fa-brands fa-instagram fa-xl">
+            </i>
+          </a>
+          <a class="btn btn-outline-dark btn-social mx-1" 
+             href="https://youtube.com/"
+             target="_blank">
+            <i class="fa-brands fa-youtube fa-xl">
+            </i>
           </a>
         </div>
       </div>
@@ -249,7 +277,7 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Powered by Lunar Studios</small>
+      <small> created by psychostudios <span>&copy;</span></small>
     </div>
   </section>
 
@@ -379,21 +407,7 @@
     </div>
   </div>
 
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <!-- <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script> -->
-
-  <!-- Custom scripts for this template -->
-  <script src="js/freelancer.min.js"></script>
-
+<!-- psychobaby -->
 </body>
 
 </html>

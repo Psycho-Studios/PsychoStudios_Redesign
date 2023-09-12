@@ -1,4 +1,7 @@
+
+
 .masthead {
+  background-color: #57a7f1;
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
   .masthead-heading {
@@ -13,17 +16,17 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .masthead {
-    padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
-    .masthead-heading {
-      font-size: 4rem;
-      line-height: 3.5rem;
-    }
-    .masthead-subheading {
-      font-size: 1.5rem;
-    }
+// @include media-breakpoint-up(lg) {
+//   .masthead {
+//     padding-top: calc(6rem + 104px);
+//     padding-bottom: 6rem;
+//     .masthead-heading {
+//       font-size: 4rem;
+//       line-height: 3.5rem;
+//     }
+//     .masthead-subheading {
+//       font-size: 1.5rem;
+//     }
 
-  }
-}
+//   }
+// }
