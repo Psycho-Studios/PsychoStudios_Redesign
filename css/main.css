@@ -40,7 +40,7 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #ffeb3a;
-  color: #57a7f1;
+  color: black;
 }
 
 .fa-brands a.btn.hover, .fab a.btn.hover {
@@ -49,6 +49,10 @@
 
 .copyright {
   background-color: #ffe711;
+  color: #000;
+}
+.copyright .small {
+  color: #000;
 }
 
 .masthead {
