@@ -4,7 +4,7 @@
   "description": "Psycho Studios rebranded web app",
   "main": "index.js",
   "scripts": {
-    "compile": "sass --watch --no-source-map ./scss/main.scss ./css/main.css"
+    "compile": "sass --watch --no-source-map ./public/scss/main.scss .public/css/main.css"
   },
   "repository": {
     "type": "git",
