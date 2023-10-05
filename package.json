@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Psycho Studios rebranded web app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "compile": "sass --watch --no-source-map ./public/scss/main.scss .public/css/main.css"
+    "compile": "sass --watch --no-source-map ./public/scss/main.scss public/css/main.css"
   },
   "repository": {
     "type": "git",
