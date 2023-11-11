@@ -1,10 +1,7 @@
-import express from "express";
+var express = require("express");
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import jQuery from "jquery";
-import { nextTick } from "process";
-
 
 const app = express();
 const log = console.log;
