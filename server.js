@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const app = express();
 const log = console.log;
 const path = dirname(fileURLToPath(import.meta.url));
-const port = 'psychostudios.net';
+const port = 80;
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -23,5 +23,5 @@ app.post("/email", (req, res) => {
   });
 
 app.listen(port, () => {
-    log("server running successfully on port 3000 dragon");
+    log("server running successfully on port 80 dragon");
 });
