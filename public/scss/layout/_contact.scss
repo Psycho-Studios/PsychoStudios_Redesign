@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+
+// Styling for the contact section
+h2 {
+    font: $headings-font-weight, $headings-font-family;
+};
+
+.floating-label-form-group {
+  position: relative;
+  border-bottom: 3px solid  #0f0f0f00;
+  background-color: #1b1313f8,fade-out($color: #f3f1f1, $amount: 0);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "psychostudios_redesign",
+  "version": "1.0.0",
+  "description": "Psycho Studios rebranded web app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "compile": "sass --watch --no-source-map ./public/scss/main.scss public/css/main.css",
+    "watch-app": "index.js",
+    "watch-css": "sass --watch --no-source-map ./public/scss/main.scss public/css/main.css",
+    "watch": "npm-run-all --parallel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeshawn/PsychoStudios_Redesign.git#development"
+  },
+  "author": "DaVeon James , Jeshawn Chrite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeshawn/PsychoStudios_Redesign/issues"
+  },
+  "homepage": "https://github.com/Jeshawn/PsychoStudios_Redesign/tree/development#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jquery": "^3.7.1",
+    "sass": "^1.64.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
