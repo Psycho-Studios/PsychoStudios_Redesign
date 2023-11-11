@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const app = express();
 const log = console.log;
 const path = dirname(fileURLToPath(import.meta.url));
-const port = 3000;
+const port = 'psychostudios.net';
 
 app.use(express.static("public"));
 app.use(express.json());
