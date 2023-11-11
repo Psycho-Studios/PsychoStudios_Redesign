@@ -1,5 +1,5 @@
 var express = require("express");
-import bodyParser from "body-parser";
+var bodyParser = require("body-parser");
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
