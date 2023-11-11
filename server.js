@@ -7,8 +7,6 @@ var fs = require('fs');
 // Create a service (the app object is just a callback).
 var app = express();
 
-// Create an HTTP service.
-http.createServer(app).listen(80);
 // Create an HTTPS service identical to the HTTP service.
 https.createServer(options, app).listen(443);
 
@@ -19,7 +17,7 @@ import { fileURLToPath } from "url";
 const app = express();
 const log = console.log;
 const path = dirname(fileURLToPath(import.meta.url));
-const port = 80;
+const port = 443;
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -36,5 +34,5 @@ app.post("/email", (req, res) => {
   });
 
 app.listen(port, () => {
-    log("server running successfully on port 80 dragon");
+    log("server running successfully on port 443 dragon");
 });
