@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+var dirname = "/";
+var fileURLToPath = require("url");
 
 const app = express();
 const log = console.log;
