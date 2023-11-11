@@ -1,25 +1,19 @@
-import express from "express";
-import bodyParser from "body-parser";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+// form data collection script
+import $ from 'jquery'
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+$('sentMessage').on('submit' , (e) => {
+    // e.preventDefault();
+    const name  = $('#name').val().trim();
+    const email  = $('#email').val().trim();
+    const phone  = $('#phone').val().trim();
+    const text = $('#text').val().trim();
 
-const app = express();
-const port = 3000;
-
-
-app.use(express.static("public"));
-
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.get( "/" , (req, res) => {
-    res.render("public/index.html")
+    const data = { 
+        name,
+        email,
+        phone, 
+        text 
+    };
+    
 });
 
-
-
-app.listen(port, () => {
-    console.log("server running successfully on port 3000 dragon");
-});

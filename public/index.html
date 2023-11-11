@@ -10,7 +10,7 @@
 
   <title>Psycho Studios</title>
   
-  <link rel="icon" href="public/images/newpsychostudios.png" type="image/x-icon">
+  <link rel="icon" href="/public/images/newpsychostudios.png" type="image/x-icon">
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -143,10 +143,10 @@
 
       <!-- About Section Content -->
       <div class="row">
-        <div class="col-lg-4 ml-auto">
+        <div class="col-lg-6">
           <img class="img-fluid " src="/images/Screenshot1.png" alt="">
         </div>
-        <div class="col-lg-4 mr-auto">
+        <div class="col-lg-6 ">
             <p> 
                 Games can be art, and very well should be. Heart and soul can make a video game timeless. 
                 To be remembered is to have a legacy.If you aren't addicted to playing what you created, there's room for improvement. 
@@ -168,8 +168,8 @@
       <!-- Contact Section Form -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <!-- To configure the contact form email address, go to and index.js the email address in the PHP file on line 19. -->
-          <form name="sentMessage" id="contactForm" novalidate="novalidate" action="http://www.psychostudios.net:8080/emailDrAcoustic" method="POST">
+          <!-- To configure the contact form email address, go to and index.js the email address in the index.js file on line 19. -->
+          <form name="sentMessage" id="contactForm" novalidate="novalidate" action="/email" method="post">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
@@ -213,7 +213,7 @@
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Message</label>
                 <textarea class="form-control" 
-                          id="message" 
+                          id="text" 
                           rows="5" 
                           name="message" 
                           placeholder="Message" 
@@ -412,7 +412,8 @@
     </div>
   </div>
 
-<!-- psychobaby -->
+<script src="/js/index.js"></script>
+
 </body>
 
 </html>

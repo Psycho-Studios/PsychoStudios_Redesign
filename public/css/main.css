@@ -36,6 +36,10 @@
   background-color: #57a7f1;
 }
 
+div.row {
+  margin: 3rem;
+}
+
 h2 {
   font: 800, "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
