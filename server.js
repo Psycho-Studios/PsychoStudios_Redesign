@@ -20,8 +20,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get( "/" , (req, res) => {
-    res.sendFile( path , + "index.html")
+app.get( "/" , async (req, res) => {
+    try
+    {
+       const result = await app.get(path + "/public/index.html");
+       res.render("index.html", {content: "APIResponse"});
+    }
+    catch(Error e)
+    {
+        res.status(404).send();
+    }
 });
 
 app.post("/email", (req, res) => {
