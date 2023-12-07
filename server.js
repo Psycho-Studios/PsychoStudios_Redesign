@@ -26,7 +26,7 @@ app.get( "/" , async (req, res) => {
        const result = await app.get(path + "/public/index.html");
        res.render("index.html", {content: "APIResponse"});
     }
-    catch(Error e)
+    catch(error)
     {
         res.status(404).send();
     }
