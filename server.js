@@ -3,8 +3,6 @@ import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import jQuery from "jquery";
-import { nextTick } from "process";
-
 
 const app = express();
 const log = console.log;
@@ -24,7 +22,7 @@ app.get( "/" , (req, res) => {
 
 app.post("/email", (req, res) => {
     log('data:', req.body);
-    res.sendFile(path , "/public/index.html");
+    res.render(path , "/public/index.html");
   });
 
 
