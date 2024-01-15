@@ -1,8 +1,8 @@
-import express from "express";
-import bodyParser from "body-parser";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import jQuery from "jquery";
+import express from 'express';
+import bodyParser from 'body-parser';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import jQuery from 'jquery';
 
 const app = express();
 const log = console.log;
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get( "/" , (req, res) => {
+app.get( "/" , (req, res,) => {
     res.sendFile( path , + "index.html")
 });
 
