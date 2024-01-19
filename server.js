@@ -20,7 +20,7 @@ app.get( "/" , (req, res,) => {
 });
 
 
-app.post("/email", (req, res) => {
+app.post("/email", async (req, res) => {
     log('data:', req.body);
     res.render(path , "/public/index.html");
   });
