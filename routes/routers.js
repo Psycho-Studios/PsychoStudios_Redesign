@@ -23,27 +23,29 @@ router.get( "/" , (req, res,) => {
     res.sendFile( path.join(__dirname , "../views/index.html"));
 });
 
+router.get( "/failure" , (req, res) => {
+    res.sendFile( path.join(__dirname , "../views/failure.html"));
+});
+
+router.get( "/success" , (req, res) => {
+    res.sendFile( path.join(__dirname , "../views/success.html"));
+});
 
 router.post( "/email", (req, res) => {
-    // [
-    //   check('name', 'Name is required').not().isEmpty(), 
-    //   check('email', 'Email is required').isEmail(),
-    //   check('phone', 'Phone is required').not().isEmpty(),
-    //   check('message', 'Message is required').not().isEmpty()
-    // ],
-    // async (req, res) => {
-    //   const errors = validationResult(req);
-    //   if (!errors.isEmpty()) {
-    //     return res.status(400).json({ errors: errors.array() });
-    //   }
-  
+  let check = 
+        [
+          check('name', 'Name is required').not().isEmpty(), 
+          check('email', 'Email is required').isEmail(),
+          check('phone', 'Phone is required').not().isEmpty(),
+          check('message', 'Message is required').not().isEmpty()
+        ];
+    
       try {
         const { name , email , phone , message } = req.body;
         console.log('user data:', req.body);
-        res.send('Information received')
+        res.redirect('/success');
       } catch (error) {
         console.error(error);
         res.status(500).send('An error has occurred');
       }
-    }
-  );
+    });
