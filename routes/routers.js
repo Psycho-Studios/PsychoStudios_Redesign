@@ -31,14 +31,16 @@ router.get( "/success" , (req, res) => {
     res.sendFile( path.join(__dirname , "../views/success.html"));
 });
 
-router.post( "/email", (req, res) => {
-  let check = 
+router.post( "/email", 
+
         [
           check('name', 'Name is required').not().isEmpty(), 
           check('email', 'Email is required').isEmail(),
           check('phone', 'Phone is required').not().isEmpty(),
           check('message', 'Message is required').not().isEmpty()
-        ];
+        ] , 
+        async (req, res) => {
+
     
       try {
         const { name , email , phone , message } = req.body;
