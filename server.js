@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import jQuery from 'jquery';
 import { router } from './routes/routers.js';
 
+const app = express();
 const log = console.log;
 const path = dirname(fileURLToPath(import.meta.url));
 const port = 3000;

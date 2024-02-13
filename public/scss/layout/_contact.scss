@@ -2,10 +2,10 @@
 
 // Styling for the contact section
 
-h2 { 
+.contact-heading {
     font: $headings-font-family;
     font-size: 3.5rem;
-};
+}
 
 .floating-label-form-group {
   position: relative;

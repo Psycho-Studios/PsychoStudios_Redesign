@@ -2,10 +2,12 @@
 
 // Styling for the navbar
 #mainNav {
-   background-color: darken($blue, 3%);    
+   background-color: darken($blue, 3%);
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
    padding: 1.5rem 0;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
+   color: #000;
+   font-family: $headings-font-family;
+   font-weight: $headings-font-weight;
   .navbar-brand {
     color: white;
     a.navbar-brand {
@@ -43,6 +45,7 @@
   .navbar-toggler {
     font-size: 80%;
     padding: 0.8rem;
+    
   }
 
 }

@@ -40,14 +40,18 @@ router.post( "/email",
           check('message', 'Message is required').not().isEmpty()
         ] , 
         async (req, res) => {
+          const errors = validationResult(req); 
+          if (!errors.isEmpty()) {
+            console.log(errors, "One or more fields are not correctly filled");
+            return res.redirect('/failure');
+          }
 
-    
       try {
         const { name , email , phone , message } = req.body;
         console.log('user data:', req.body);
         res.redirect('/success');
       } catch (error) {
-        console.error(error);
-        res.status(500).send('An error has occurred');
+        console.error(error, "One or more fields are not correctly filled");
+        res.redirect('/failure');
       }
     });

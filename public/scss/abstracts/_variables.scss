@@ -28,3 +28,7 @@ $input-btn-border-width: $border-width !default;
 // Override Bootstrap modal variables
 $modal-inner-padding: 4rem 1rem !default;
 $modal-content-border-width: 0 !default;
+
+// failure and success colors for jumbotron
+$failure: #ff4d4d56 !default;
+$success: #2ef34f75 !default;
