@@ -125,13 +125,6 @@
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #57a7f1;
 }
-#mainNav .navbar-collapse {
-  max-width: fit-content;
-}
-#mainNav .navbar-toggler {
-  font-size: 80%;
-  padding: 0.8rem;
-}
 
 .portfolio {
   margin-bottom: -30px;

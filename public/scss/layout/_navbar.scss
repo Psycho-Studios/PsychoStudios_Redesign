@@ -8,10 +8,10 @@
    color: #000;
    font-family: $headings-font-family;
    font-weight: $headings-font-weight;
-  .navbar-brand {
-    color: white;
-    a.navbar-brand {
-      &.hover { color: #57a7f1;
+    .navbar-brand {
+      color: white;
+      a.navbar-brand {
+        &.hover { color: #57a7f1;
       }
     }
   }
@@ -39,14 +39,6 @@
      }
   }
 
-.navbar-collapse{
-  max-width: fit-content;
-}
-  .navbar-toggler {
-    font-size: 80%;
-    padding: 0.8rem;
-    
-  }
 
 }
 // media-breakpoint-up(lg) {
