@@ -3,6 +3,7 @@ import { check, validationResult } from 'express-validator';
 import dotenv from 'dotenv'; 
 import { dirname } from 'path'; 
 import express from 'express'; 
+import {google} from 'googleapis';
 import nodemailer from 'nodemailer';
 
 import { fileURLToPath } from 'url';import  path  from 'path';
@@ -20,8 +21,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file  
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only
+
 const transporter = nodemailer.createTransport({
+  
     service: 'gmail',
     auth: { 
         user: process.env.EMAIL, 
@@ -43,11 +46,10 @@ router.get( "/success" , (req, res) => {
 });
 
 router.post( "/email", 
-
+        // an array that checks if the fields are empty or not and returns an error message if they are
       [
         check('name', 'Name is required').not().isEmpty(), 
         check('email', 'Email is required').isEmail(),
-        check('phone', 'Phone is required').not().isEmpty(),
         check('message', 'Message is required').not().isEmpty()
       ] , 
       async (req, res) => {
