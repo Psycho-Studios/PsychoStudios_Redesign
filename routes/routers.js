@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { dirname } from 'path'; 
 import express from 'express'; 
 import {google} from 'googleapis';
+import { OAuth2Client } from 'google-auth-library';
 import nodemailer from 'nodemailer';
 
 import { fileURLToPath } from 'url';import  path  from 'path';
@@ -24,10 +25,11 @@ dotenv.config(); // to use the .env file
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only
 
 const transporter = nodemailer.createTransport({
-  
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     service: 'gmail',
     auth: { 
-        type: 'OAuth2',
         user: process.env.EMAIL, 
         pass: process.env.PASSWORD
     }
