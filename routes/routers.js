@@ -25,7 +25,7 @@ dotenv.config(); // to use the .env file
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'target',
     port: 587,
     secure: false,
     service: 'gmail',
