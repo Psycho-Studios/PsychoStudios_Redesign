@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import { dirname } from 'path'; 
 import express from 'express'; 
 import {google} from 'googleapis';
-import { OAuth2Client } from 'google-auth-library';
 import nodemailer from 'nodemailer';
 
 import { fileURLToPath } from 'url';import  path  from 'path';
@@ -65,6 +64,7 @@ router.post( "/email",
     try {
       // Takes user data and creates a mailOptions object for nodemailer
       const { name , email , phone , message } = req.body;
+      
         const mailOptions = {
           from: req.body.email,
           to: process.env.EMAIL,
