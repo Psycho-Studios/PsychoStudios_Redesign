@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file  
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only Delete in production
+// after you have an https certificate delete the line above and change the port to 443 true for production
 
 const transporter = nodemailer.createTransport({
     host: 'target',
@@ -35,6 +36,7 @@ const transporter = nodemailer.createTransport({
   });
 
 
+// Routes that handle the different views of the website
 router.get( "/" , (req, res,) => {
     res.sendFile( path.join(__dirname , "../views/index.html"));
 });
