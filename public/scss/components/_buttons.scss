@@ -1,9 +1,21 @@
-@use '../abstracts/variables' as v;
+@use "../abstracts/variables" as *;
 
 // Custom extra larg button size
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
+}
+
+#btn-cta1,
+#btn-cta2 {
+  background-color: $secondary;
+  color: rgb(2, 2, 2);
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    color: white;
+    background-color: darken($secondary, 60%);
+  }
 }
 
 // Custom social buttons
@@ -16,9 +28,8 @@
   justify-content: center;
   align-items: center;
 
-  &:hover {  
+  &:hover {
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
-  };
-
+  }
 }

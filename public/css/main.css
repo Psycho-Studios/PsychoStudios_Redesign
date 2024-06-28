@@ -12,6 +12,19 @@
   font-size: 1.25rem;
 }
 
+#btn-cta1,
+#btn-cta2 {
+  background-color: #ffeb3a;
+  color: rgb(2, 2, 2);
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+#btn-cta1:hover,
+#btn-cta2:hover {
+  color: white;
+  background-color: #070600;
+}
+
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
