@@ -15,14 +15,16 @@
 #btn-cta1,
 #btn-cta2 {
   background-color: #ffeb3a;
-  color: rgb(2, 2, 2);
-  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 2px #000000;
   transition: all 0.4s ease-in-out;
 }
 #btn-cta1:hover,
 #btn-cta2:hover {
+  background-color: #d3be00;
   color: white;
-  background-color: #070600;
+  transform: scale(1.1);
 }
 
 .btn-social {
