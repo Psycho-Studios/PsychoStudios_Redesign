@@ -10,6 +10,11 @@ $gray-200: rgba(218, 197, 197, 0.534) !default;
 $primary: $blue !default;
 $secondary: $yellow !default;
 
+// Override Bootstrap Heading variables
+$H1-font-size: 3.5rem !default;
+$H2-font-size: 2.5rem !default;
+$H3-font-size: 1.75rem !default;
+
 // Override Bootstrap font variables
 $font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -35,3 +40,5 @@ $modal-content-border-width: 0 !default;
 // failure and success colors for jumbotron
 $failure: #ff4d4d56 !default;
 $success: #2ef34f75 !default;
+
+$hover-transition: all 0.9s ease-in-out !default;

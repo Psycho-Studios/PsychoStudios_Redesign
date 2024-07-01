@@ -9,9 +9,8 @@ import { fileURLToPath } from "url";
 import path from "path";
 
 const app = express();
-const log = console.log;
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
+const log = console.log;
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-f
 dotenv.config(); // to use the .env file
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only Delete in production
 // after you have an https certificate delete the line above and change the port to 443 true for production
+
+export const router = express.Router(); // router functNions created and exportedN
 
 const transporter = nodemailer.createTransport({
   host: "target",
@@ -88,4 +89,3 @@ router.post(
     }
   }
 );
-export const router = express.Router(); // router functNions created and exportedN
