@@ -19,7 +19,7 @@ dotenv.config(); // to use the .env file
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only Delete in production
 // after you have an https certificate delete the line above and change the port to 443 true for production
 
-export const router = express.Router(); // router functNions created and exportedN
+export const router = express.Router(); // router functNions created and exported
 
 const transporter = nodemailer.createTransport({
   host: "target",

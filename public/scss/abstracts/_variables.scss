@@ -41,4 +41,7 @@ $modal-content-border-width: 0 !default;
 $failure: #ff4d4d56 !default;
 $success: #2ef34f75 !default;
 
+// btn hover transition
 $hover-transition: all 0.9s ease-in-out !default;
+$toggler-hover-transition: box-shadow 0.3s ease-in-out,
+  border-color 0.3s ease-in-out !default;
