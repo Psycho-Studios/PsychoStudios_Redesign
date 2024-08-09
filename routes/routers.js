@@ -16,8 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; // to avoid self-signed certificate error for testing purposes only Delete in production
-// after you have an https certificate delete the line above and change the port to 443 true for production
+process.env.port = "443"; //Production value, use '0' when in lower environment (lol this is technically Github, a "side" environment)
 
 export const router = express.Router(); // router functNions created and exported
 
