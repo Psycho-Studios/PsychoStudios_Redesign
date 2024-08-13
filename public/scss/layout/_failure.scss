@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as v;
+
+  .jumbotron {
+      .failure-btn {
+        margin: 0 auto;
+        background-color: v.$blue;
+        color: white;
+        transition: ease-in-out 0.3s;
+        &:hover {
+          background-color: v.$dark-blue;
+      }
+    }
+  };
+
+ 

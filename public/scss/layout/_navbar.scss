@@ -1,51 +1,97 @@
-@use '../abstracts/variables' as *;
+@use "../abstracts/variables" as *;
 
 // Styling for the navbar
 #mainNav {
-   background-color: darken($blue, 3%);    
-   padding: 1.5rem 0;
+  background-color: darken($blue, 3%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1.5rem 0;
+  color: #000;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
-  .navbar-brand {
+  a.navbar-brand {
     color: white;
-    a.navbar-brand {
-      &.hover { color: #57a7f1;
+    transition: $hover-transition;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.navbar-nav {
+  margin-top: 1rem;
+  &.hover {
+    color: #57a7f1;
+  }
+  li.nav-item {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    a.nav-link {
+      color: white;
+      transition: $hover-transition;
+      &:hover {
+        color: $yellow;
+      }
+      &:active,
+      &:focus {
+        color: white;
+      }
+      &.active {
+        color: $primary;
       }
     }
   }
-  .navbar-nav {
-    margin-top: 1rem;
-    &.hover { color: #57a7f1;
-    }
-    li.nav-item {
-      font-family: $headings-font-family;
-      font-weight: $headings-font-weight;
-      a.nav-link {
-        color: white;
-        &:hover {
-          color: $yellow;
-          transition: 700ms ease-in-out;
-        }
-        &:active,
-        &:focus {
-          color: white;
-        }
-        &.active {
-          color: $primary;
-        }
-       }
-     }
-  }
-
-.navbar-collapse{
-  max-width: fit-content;
 }
-  .navbar-toggler {
-    font-size: 80%;
-    padding: 0.8rem;
-  }
+// nabar toggler button styling
+#navBtn {
+  border: white;
+  transition: $toggler-hover-transition;
+  // .navbar-toggler-icon {
+  //   background-image: none; // Remove default background-image if exists
+  //   position: relative;
+  //   width: 30px; // Width of the hamburger
+  //   height: 2px; // Height of one line
+  //   background-color: white; // Color of the hamburger
+  //   transition: transform 0.5s; // Smooth transformation
 
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     width: 100%;
+  //     height: 2px; // Height of one line
+  //     background-color: white; // Color of the lines
+  //     transition: transform 0.5s; // Smooth transformation
+  //   }
+
+  //   &::before {
+  //     top: -10px; // Position the top line
+  //   }
+
+  //   &::after {
+  //     top: 10px; // Position the bottom line
+  //   }
+  // }
+
+  // &.toggled .navbar-toggler-icon {
+  //   transform: rotate(135deg); // Rotate the middle line for "X"
+
+  //   &::before {
+  //     transform: rotate(90deg) translate(-10px, 0); // Rotate and move the top line to form "X"
+  //   }
+
+  //   &::after {
+  //     transform: rotate(90deg) translate(-10px, 0); // Rotate and move the bottom line to form "X"
+  //   }
+  // }
+  &:hover {
+    box-shadow: 0 0 0 0.2rem white;
+    border-color: white;
+  }
+  .navbar-toggler-icon {
+    fill: white;
+  }
 }
+
 // media-breakpoint-up(lg) {
 //   #mainNav {
 //     padding-top: 1.5rem;

@@ -1,4 +1,5 @@
-
+// hero section of the page
+@use "../abstracts/variables" as *;
 
 .masthead {
   background-color: #57a7f1;
@@ -6,10 +7,11 @@
   padding-bottom: 6rem;
   .masthead-heading {
     font-size: 5rem;
-    line-height: 2.75rem;
+    line-height: 5rem;
   }
-  .masthead-subheading {
-    font-size: 1.25rem;
+  p {
+    font-size: 2rem;
+    color: $gray;
   }
   .masthead-avatar {
     width: 15rem;

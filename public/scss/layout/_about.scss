@@ -1,9 +1,18 @@
 @use '../abstracts/variables' as *;
 
 .about-section { 
-    background-color: #57a7f1;
+    background-color: hsl(209, 85%, 64%);
+    font-size: 1.5em;
+    padding-bottom: 3rem;
+    h2 {
+        font: $headings-font-family;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
-div.row {
-    margin: 3rem;
-}
+// .about-heading {
+//     font-size: 3.5rem;
+//     line-height: 3rem;
+//     margin: 0 0 3rem 0;
+// }
