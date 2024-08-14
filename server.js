@@ -8,7 +8,6 @@ const app = express();
 const log = console.log;
 const path = dirname(fileURLToPath(import.meta.url));
 const port = 3000;
-// change port to 443 in production to enable https connection
 
 app.use(express.static("public"));
 app.use(express.json());
