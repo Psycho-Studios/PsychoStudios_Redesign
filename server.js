@@ -1,9 +1,8 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import jQuery from 'jquery';
-import { router } from './routes/routers.js';
+import express from "express";
+import bodyParser from "body-parser";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { router } from "./routes/routers.js";
 
 const app = express();
 const log = console.log;
@@ -17,5 +16,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(router);
 
 app.listen(port, () => {
-    log("server running successfully on port 3000 sir !");
+  log("server running successfully on port 3000 sir !");
 });

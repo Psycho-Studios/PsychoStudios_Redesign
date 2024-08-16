@@ -50,6 +50,7 @@ router.post(
   [
     check("name", "Name is required").not().isEmpty(),
     check("email", "Email is required").isEmail(),
+    check("phone", "Phone number is required").not().isEmpty(),
     check("message", "Message is required").not().isEmpty(),
   ],
   async (req, res) => {
