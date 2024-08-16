@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+
+// Custom extra larg button size
+.btn-xl {
+  padding: 1rem 1.75rem;
+  font-size: 1.25rem;
+}
+
+#btn-cta1,
+#btn-cta2 {
+  background-color: $secondary;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 2px #000000;
+  transition: $hover-transition;
+  &:hover {
+    background-color: darken($secondary, 20%);
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+// Custom social buttons
+.btn-social {
+  border-radius: 100%;
+  display: inline-flex;
+  // width: 3.25rem;
+  // height: 3.25rem;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  transition: $hover-transition, transform 0.6s ease-in-out;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
