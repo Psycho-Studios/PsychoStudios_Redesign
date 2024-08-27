@@ -212,6 +212,9 @@
   background-color: rgba(87, 167, 241, 0.5411764706);
 }
 
+.about-me-section{
+  text-align: center;
+}
 
 @font-face{
   font-family: 'Lato';

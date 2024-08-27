@@ -15,12 +15,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
-  <link rel="manifest" href="/public/images/site.webmanifest">
+  <!-- <link rel="manifest" href="/public/images/site.webmanifest"> -->
   <link rel="mask-icon" href="/public/images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="/public/images/favicon.ico">
 
   <!-- Custom fonts for this theme -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/html">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -109,7 +109,7 @@
 
       <!-- Masthead Heading -->
       <h1 class="masthead-heading text-uppercase my-5">Psycho Studios</h1>
-        <p>"We're here to solve your engineeering and gaming needs"</p>
+        <p>"We're here to solve your engineering and gaming needs"</p>
           <div class="row gap-2"> 
             <a href="#portfolio" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta1">Browse our games</a>
             <a href="#contact"class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta2">contact our team</a>
@@ -130,13 +130,13 @@
 
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="portfolioModal1" data-target="#portfolioModal1">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#beastModonModal">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="/images/Screenshot1.png" alt="">
+            <img class="img-fluid" src="/images/BeastModonScreenshot1.png" alt="">
           </div>
         </div>
 
@@ -151,20 +151,6 @@
             <img class="img-fluid" src="/images/ComingSoon.png" alt="">
           </div>
         </div>
-     
-        <!-- Portfolio Item 3 
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-          </div>
-        </div>
-      -->
-      <!-- /.row -->
   </section>
 
   <!-- About Section -->
@@ -176,34 +162,37 @@
 
 
       <!-- About Section Content -->
+       <!-- Images sizes:
+       Small: 348px x 348px 
+       Medium: 696px x 696px
+       Large: 1392px x 1392px-->
       <div class="row">
         <div class="col-lg-6">
-          <img class="img-fluid " src="/images/Screenshot1.png" alt="">
+          <img class="img-fluid"
+            src="/images/JeshawnChrite_selfie.png"
+            srcset="/images/JeshawnChrite_selfie-348w.png 348w,
+                    /images/JeshawnChrite_selfie-696w.png 696w,
+                    /images/JeshawnChrite_selfie-1292w.png 1292w"
+            sizes="(max-width: 348px) 25vw,
+                  (max-width: 696px) 25vw,
+                  (max-width: 1292px) 27vw,
+                 15vw"
+                 
+            alt="Jeshawn Chrite Selfie">
         </div>
-        <div class="col-lg-6 ">
+        <div class="col-lg-6 about-me-description">
             <p> 
-                Games can be art, and very well should be. Heart and soul can make a video game timeless. 
-                To be remembered is to have a legacy.If you aren't addicted to playing what you created, there's room for improvement. 
-                This philosophy is what makes studios psycho... and I'm proud of it.
+                I believe video games are art. They become timeless with enough effort and care. 
+                It is my mission to make games that inspire others to follow their dreams and
+                make the world a better place with their own creativity, dedication, and grit.
+                I felt the muse of video game development ever since I was a child and will not
+                stop until I know I've gifted humanity the same thing.
             </p>
         </div>
+      </div>
       <div class="row">
         <div class="col-lg-6">
-          <img class="img-fluid " src="/images/Screenshot1.png" alt="">
-        </div>
-        <div class="col-lg-6 ">
-          <h3>
-            Jeshawn Chrite
-          </h3>
-            <p> 
-                Games can be art, and very well should be. Heart and soul can make a video game timeless. 
-                To be remembered is to have a legacy.If you aren't addicted to playing what you created, there's room for improvement. 
-                This philosophy is what makes studios psycho... and I'm proud of it.
-            </p>
-        </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <img class="img-fluid " src="/images/Screenshot1.png" alt="">
+          <img class="img-fluid " src="" alt="">
         </div>
         <div class="col-lg-6 ">
           <h3>
@@ -234,7 +223,7 @@
           <form name="sentMessage" id="contactForm" novalidate="novalidate" action="/email" method="post">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Name</label>
+                <label for="name">Name</label>
                 <input class="form-control" 
                         id="name" 
                         name="name" 
@@ -242,38 +231,42 @@
                         placeholder="Guy Guyerson" 
                         required="required" 
                         data-validation-required-message="Please enter your name." 
-                        required autofocus>
+                        required autofocus
+                        autocomplete="on"/>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Email Address</label>
+                <label for="email">Email Address</label>
                 <input class="form-control" 
-                        id="email" name="email" 
+                        id="email" 
+                        name="email" 
                         type="email" 
                         placeholder="Thatguy@gmail.com" 
                         required="required" 
-                        data-validation-required-message="Please enter your email address.">
+                        data-validation-required-message="Please enter your email address."
+                        autocomplete="on" />
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Phone Number</label>
+                <label for="phone">Phone Number</label>
                 <input class="form-control" 
                         id="phone" 
                         name="phone" 
                         type="tel" 
                         placeholder="+1 (555) 555-5555" 
                         required="required" 
-                        data-validation-required-message="Please enter your phone number.">    
+                        data-validation-required-message="Please enter your phone number."
+                        autocomplete="on" />    
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Message</label>
+                <label for="text">Message</label>
                 <textarea class="form-control" 
                           id="text" 
                           rows="5" 
@@ -294,7 +287,7 @@
 
     </div>
   </section>
-<div class="container"></div>
+
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
@@ -348,56 +341,52 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-black">
     <div class="container">
-      <small> created by psychostudios <span>&copy;</span></small>
+      <small> Created by Psycho Studios, LLC <span>&copy;</span> <span id="copyright-date"></span></small>
     </div>
   </section>
 
 
   <!-- Portfolio Modals -->
-
-  <!-- Portfolio Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <i class="fas fa-times"></i>
-          </span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Beast Modon</h2>
-                <!-- Icon Divider -->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
-                    <i class="fas fa-star"></i>
+  <section>
+  <!-- Beast Modon Modal -->
+    <div class="portfolio-modal modal fade" id="beastModonModal" tabindex="-1" role="dialog" aria-labelledby="beastModonModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Beast Modon</h2>
+                  <!-- Icon Divider -->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
                   </div>
-                  <div class="divider-custom-line"></div>
+                  <!-- Portfolio Modal - Image -->
+                  <img class="img-fluid rounded mb-5 img1" src="/images/BeastModonScreenshot1.png" alt="">
+                  <!-- Portfolio Modal - Text -->
+                  <p class="mb-5">Beast Modon is Psycho Studios' first project, a labor of love for fans of hip hop, shootem' ups and weapons... Lots of weapons. Made with Unity via C# and entirely by myself. You can find it on the Google Play Store, App Store, or Steam (click below). Turn your Beast Mode on... You're going to need it.</p>
+                  <a href="https://store.steampowered.com/app/917810/Beast_Modon/">
+                    <button class="btn btn-primary">
+                      Download Here!
+                    </button>
+                  </a>
                 </div>
-                <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5 img1" src="/images/Screenshot1.png" alt="">
-                <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Beast Modon is my first project, a labor of love for fans of hip hop, shootem' ups and weapons... Lots of weapons. Made with Unity via C# and entirely by myself. You can find it on the Google Play Store, App Store, or Steam (click below). Turn your Beast Mode on... You're going to need it.</p>
-                <a href="https://store.steampowered.com/app/917810/Beast_Modon/"><button class="btn btn-primary">
-                  
-                  Download Here!
-                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
- 
-
-  <!-- Portfolio Modal 3 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -408,34 +397,24 @@
         <div class="modal-body text-center">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                <!-- Icon Divider -->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon">
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/circus.png" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5"></p>
-                <a href="https://store.steampowered.com/app/917810/Beast_Modon/"><button class="btn btn-primary">
-                  <i class="fas fa-fw"></i>
-                  Download Here!
-                </button></a>
+                <a href="https://store.steampowered.com/app/917810/Beast_Modon/">
+                  <button class="btn btn-primary">
+                    <i class="fas fa-fw"></i>
+                    Download Here!
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-<script src="/js/index.js"></script>
+  <script src="/js/index.js"></script>
 
 </body>
 
