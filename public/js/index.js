@@ -1,9 +1,7 @@
-// event listner for hamburger menu
-import $ from "jquery";
-
-$(document).add("DomContentLoaded", () => {
-  const navBtn = $(".nav-btn");
-});
-navBtn.on("click", () => {
-  this.classList.toggle("toggled");
+//Edits for future site functionality go here.
+document.addEventListener("DOMContentLoaded", () => {
+  const dateElement = document.getElementById("copyright-date");
+  const currentDate = new Date();
+  const options = { year: 'numeric'};
+  dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
 });
