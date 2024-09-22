@@ -1,19 +1,244 @@
-/* Error: Undefined variable.
- *    ,
- * 10 |   font-weight: $headings-font-weight;
- *    |                ^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   public\scss\layout\_navbar.scss 10:16  @forward
- *   public\scss\_index.scss 8:1            @use
- *   public\scss\main.scss 1:1              root stylesheet */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.btn-xl {
+  padding: 1rem 1.75rem;
+  font-size: 1.25rem;
+}
+
+#btn-cta1,
+#btn-cta2 {
+  background-color: #ffeb3a;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 2px #000000;
+  transition: all 0.9s ease-in-out;
+}
+#btn-cta1:hover,
+#btn-cta2:hover {
+  background-color: #d3be00;
+  color: white;
+  transform: scale(1.1);
+}
+
+.btn-social {
+  border-radius: 100%;
+  display: inline-flex;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.9s ease-in-out, transform 0.6s ease-in-out;
+}
+.btn-social:hover {
+  transform: scale(1.3);
+}
+
+.about-section {
+  background-color: hsl(209, 85%, 64%);
+  font-size: 1.5em;
+  padding-bottom: 3rem;
+}
+.about-section h2 {
+  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  margin-bottom: 2rem;
+}
+
+.contact-heading {
+  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-size: 3.5rem;
+}
+
+.floating-label-form-group {
+  position: relative;
+  border-bottom: 3px solid rgba(15, 15, 15, 0);
+  background-color: rgba(27, 19, 19, 0.9725490196), #f3f1f1;
+}
+
+.form-group button {
+  margin: 0 auto;
+  background-color: #57a7f1;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.form-group button:hover {
+  background-color: rgba(87, 167, 241, 0.5411764706);
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffeb3a;
+  color: black;
+}
+
+.fa-brands a.btn.hover, .fab a.btn.hover {
+  color: #57a7f1;
+}
+
+.copyright {
+  background-color: #ffe711;
+  color: #000;
+}
+
+.masthead {
+  background-color: #57a7f1;
+  padding-top: calc(6rem + 74px);
+  padding-bottom: 6rem;
+}
+.masthead .masthead-heading {
+  background: radial-gradient(closest-side, #ffeb3a, white);
+  background-size: 200% 200%;
+  transition: background-position 1ms;
+  border-radius: 20px;
+  font-size: clamp(1rem, 8vw + 1rem, 12rem);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Make the text color transparent to show the background */
+  -webkit-text-fill-color: transparent;
+  /* For Safari */
+}
+.masthead p {
+  font-size: clamp(1rem, 1.25vw + 1rem, 3rem);
+  color: rgb(243, 243, 243);
+}
+.masthead .masthead-avatar {
+  width: clamp(15rem, 50vw, 30rem);
+  filter: drop-shadow(0 0 0.5rem #ffeb3a);
+}
+
+#mainNav {
+  background-color: #49a0f0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 1.5rem 0;
+  color: #000;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+#mainNav a.navbar-brand {
+  color: white;
+  transition: all 0.9s ease-in-out;
+}
+#mainNav a.navbar-brand:hover {
+  color: #ffeb3a;
+}
+#mainNav a.navbar-brand span {
+  color: #ffeb3a;
+}
+#mainNav .navbar-nav {
+  margin-top: 1rem;
+}
+#mainNav .navbar-nav.hover {
+  color: #57a7f1;
+}
+#mainNav .navbar-nav li.nav-item {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: white;
+  transition: all 0.9s ease-in-out;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #ffeb3a;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: white;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  color: #57a7f1;
+}
+
+.portfolio {
+  margin: 3rem 0;
+}
+.portfolio .portfolio-heading {
+  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  margin-bottom: 2rem;
+}
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 10 \2502    font-weight: $headings-font-weight;\a    \2502                 ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   public\\scss\\layout\\_navbar.scss 10:16  @forward\a   public\\scss\\_index.scss 8:1            @use\a   public\\scss\\main.scss 1:1              root stylesheet";
+  max-width: 25rem;
+  margin-bottom: 30px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 700ms;
+  opacity: 0;
+  background-color: rgba(87, 167, 241, 0.9);
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.jumbotron .failure-btn {
+  margin: 0 auto;
+  background-color: #57a7f1;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.jumbotron .failure-btn:hover {
+  background-color: rgba(87, 167, 241, 0.5411764706);
+}
+
+.feedback-footer {
+  margin-top: 29em;
+}
+
+.jumbotron .success-btn {
+  margin: 0 auto;
+  background-color: #57a7f1;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.jumbotron .success-btn:hover {
+  background-color: rgba(87, 167, 241, 0.5411764706);
 }

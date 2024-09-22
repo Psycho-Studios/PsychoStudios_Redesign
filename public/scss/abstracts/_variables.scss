@@ -12,8 +12,8 @@ $secondary: $yellow !default;
 
 // Override Bootstrap Heading variables
 $H1-font-size: clamp(1rem, 8vw + 1rem, 12rem) !default;
-$H2-font-size: clamp(0.75rem, 3vw + 1rem, 10rem) !default;
-$H3-font-size: clamp(0.50rem, 2vw + 1rem, 8rem) !default;
+$H2-font-size: clamp(0.75rem, 6vw + 1rem, 8rem) !default;
+$H3-font-size: clamp(0.50rem, 4vw + 1rem, 6rem) !default;
 
 // Override Bootstrap Paragraph size
 $p-font-size: clamp(1rem, 1.25vw + 1rem, 3rem) !default;
