@@ -76,7 +76,6 @@ router.post(
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           log(error);
-          log("From line 76");
           res.redirect("/failure");
         } else {
           console.log("Email sent: " + info.response);
