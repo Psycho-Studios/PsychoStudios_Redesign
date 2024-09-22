@@ -6,15 +6,16 @@
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
   .masthead-heading {
-    font-size: 5rem;
+    font-size: $H1-font-size;
     line-height: 5rem;
   }
   p {
-    font-size: 2rem;
+    font-size: $p-font-size;
     color: $gray;
   }
   .masthead-avatar {
-    width: 15rem;
+    width: clamp(15rem, 50vw, 30rem);
+    filter: drop-shadow(0 0 0.5rem $secondary);
   }
 }
 
