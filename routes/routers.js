@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file
-process.env.port = "443"; //Production value, use '0' when in lower environment (lol this is technically Github, a "side" environment)
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "1"; 
+process.env.port = "443";
 export const router = express.Router(); // router functNions created and exported
 
 const transporter = nodemailer.createTransport({
@@ -57,7 +57,7 @@ router.post(
     check("message", "Message is required").not().isEmpty(),
   ],
   async (req, res) => {
-    const errors = validationResult(req);
+    const errors =  await validationResult(req);
     if (!errors.isEmpty()) {
       log(errors, "One or more fields are not correctly filled");
       return res.redirect("/failure");
