@@ -16,22 +16,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "1"; 
-process.env.port = "443";
-export const router = express.Router(); // router functNions created and exported
+const PORT = process.env.PORT || 3000; // port number
+export const router = express.Router(); // router functions created and exported
 
 const transporter = nodemailer.createTransport({
-  host: "target",
+  host: "smtp.gmail.com",
   port: 587,
   secure: false,
-  service: "gmail",
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD,
   },
   tls: {
-    rejectUnauthorized: false,
-  },
+    minVersion: "TLSv1.2"},
 });
 
 // Routes that handle the different views of the website
