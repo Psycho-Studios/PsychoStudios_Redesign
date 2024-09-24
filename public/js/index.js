@@ -1,7 +1,7 @@
 
 //Edits for future site functionality go here.
 document.addEventListener("DOMContentLoaded", () => {
-  
+  window.scrollTo(0, 0);
   const dateElement = document.getElementById('copyright-date');
   if(!dateElement){
     return;
