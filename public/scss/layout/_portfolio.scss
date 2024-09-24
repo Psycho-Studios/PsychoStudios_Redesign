@@ -2,7 +2,12 @@
 
 // Styling for the portfolio grid section
 .portfolio {
-  margin-bottom: -30px;
+  margin: 3rem 0;
+  .portfolio-heading {
+    font: $headings-font-family;
+    font-size: $H2-font-size;
+    margin-bottom: 2rem;
+  }
   .portfolio-item {
     cursor: pointer;
     position: relative;

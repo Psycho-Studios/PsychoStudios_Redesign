@@ -11,79 +11,45 @@
   <title>Psycho Studios</title>
   <!-- favicon images for site and apps -->
 
-  <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
-  <!-- <link rel="manifest" href="/public/images/site.webmanifest"> -->
-  <link rel="mask-icon" href="/public/images/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/public/images/favicon.ico">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicon.ico">
 
   <!-- Custom fonts for this theme -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/html">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css">
 
   <!-- Theme CSS -->
   <link href="css/main.css" rel="stylesheet">
-    <!-- Bootstrap cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
-        crossorigin="anonymous">
+  <!-- Bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- font awesome cdn -->
   <script defer src="https://kit.fontawesome.com/f030b35153.js" crossorigin="anonymous"></script>
-   <!-- Bootstrap JS bundle cdn -->
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-          crossorigin="anonymous">
-  </script>
+  <!-- Bootstrap JS bundle cdn -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 
 </head>
 
-<body id="page-top">
+<body>
 
   <!-- Navigation -->
 
-  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand text-uppercase" href="https://www.psychostudios.net"> <span>Psycho</span>Studios</a>
+      <button class="navbar-toggler sticky-top navbar-light" id="navBtn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </div> -->
 
-
-<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#mainNav">PsychoStudios</a>
-      <button class="navbar-toggler sticky-top navbar-light"
-              id="navBtn" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#navBar" 
-              aria-controls="navBar" 
-              aria-expanded="false" 
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
       <div class="collapse navbar-collapse flex-row-reverse" id="navBar">
         <ul class="navbar-nav">
           <li class="nav-item mb-2 px-3">
@@ -92,29 +58,29 @@
           <li class="nav-item px-3">
             <a class="nav-link  js-scroll-trigger" href="#about">About</a>
           </li>
-          <li class="nav-item px-3" >
+          <li class="nav-item px-3">
             <a class="nav-link  js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav> 
+  </nav>
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
-    <div class="container align-items-center flex-column">
+    <div class="container align-items-center flex-column px-4">
 
       <!-- Avatar Image -->
       <img class="masthead-avatar mb-4" src="/images/newpsychostudios.png" alt="psycho studios logo ">
 
       <!-- Masthead Heading -->
       <h1 class="masthead-heading text-uppercase my-5">Psycho Studios</h1>
-        <p>"We're here to solve your engineering and gaming needs"</p>
-          <div class="row gap-2"> 
-            <a href="#portfolio" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta1">Browse our games</a>
-            <a href="#contact"class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta2">contact our team</a>
-          </div>
-        </div>
+      <p>"We're here to solve your engineering and gaming needs"</p>
+      <div class="row gap-2">
+        <a href="#portfolio" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta1">Browse our games</a>
+        <a href="#contact" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta2">Contact Us</a>
+      </div>
+    </div>
   </header>
 
   <!-- Portfolio Section -->
@@ -124,13 +90,13 @@
       <!-- Portfolio Section Heading -->
       <h2 class="portfolio-heading text-center text-uppercase text-secondary ">Current Projects</h2>
 
- 
+
       <!-- Portfolio Grid Items -->
       <div class="row">
 
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#beastModonModal">
+          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#beastModonModal">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -142,7 +108,7 @@
 
         <!-- Portfolio Item 2  -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -151,8 +117,23 @@
             <img class="img-fluid" src="/images/ComingSoon.png" alt="">
           </div>
         </div>
-  </section>
 
+        <!-- portfolio Item 3  -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="/images/ComingSoon.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
   <!-- About Section -->
   <section class="about-section page-section text-white p-3" id="about">
     <div class="container">
@@ -162,59 +143,55 @@
 
 
       <!-- About Section Content -->
-       <!-- Images sizes:
-       Small: 348px x 348px 
-       Medium: 696px x 696px
-       Large: 1392px x 1392px-->
-      <div class="row">
+      <!-- Images sizes:
+        Small: 348px x 348px 
+        Medium: 696px x 696px
+        Large: 1392px x 1392px-->
+      <div class="row m-5">
         <div class="col-lg-6">
-          <img class="img-fluid"
-            src="/images/JeshawnChrite_selfie.png"
-            srcset="/images/JeshawnChrite_selfie-348w.png 348w,
-                    /images/JeshawnChrite_selfie-696w.png 696w,
-                    /images/JeshawnChrite_selfie-1292w.png 1292w"
-            sizes="(max-width: 348px) 25vw,
-                  (max-width: 696px) 25vw,
-                  (max-width: 1292px) 27vw,
-                 15vw"
-                 
-            alt="Jeshawn Chrite Selfie">
+          <img class="about-image img-fluid" src="/images/JeshawnChrite_selfie.png" srcset="/images/JeshawnChrite_selfie-348w.png 348w,
+                      /images/JeshawnChrite_selfie-696w.png 696w,
+                      /images/JeshawnChrite_selfie-1292w.png 1292w" sizes="(max-width: 348px) 25vw,
+                    (max-width: 696px) 25vw,
+                    (max-width: 1292px) 27vw,
+                  15vw" alt="Jeshawn Chrite Selfie">
         </div>
         <div class="col-lg-6 about-me-description">
           <h3>
             Jeshawn Chrite
           </h3>
           <h4>Lead Game Developer</h4>
-        <div class="col-lg-6 about-me-description">
-            <p> 
-                I believe video games are art. They become timeless with enough effort and care. 
-                It is my mission to make games that inspire others to follow their dreams and
-                make the world a better place with their own creativity, dedication, and grit.
-                I felt the muse of video game development ever since I was a child and will not
-                stop until I know I've gifted humanity the same thing.
-            </p>
+          <p>
+            "I believe video games are art. They become timeless with enough effort and care.
+            It is my mission to make games that inspire others to follow their dreams and
+            make the world a better place with their own creativity, dedication, and grit.
+            I felt the muse of video game development ever since I was a child and will not
+            stop until I know I've gifted humanity the same thing."
+          </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row m-5">
         <div class="col-lg-6">
-          <img class="img-fluid " src="" alt="">
+          <img class="about-image img-fluid" src="/images/PSProfilePic.png" alt="DaVeon James Profile Pic">
         </div>
         <div class="col-lg-6 ">
           <h3>
             DaVeon James
           </h3>
           <h4>Lead Front-End Developer</h4>
-            <p> 
-                I'm a part time level 20 wizard and front-end developer with a scorching passion for creating beautiful and 
-                functional websites. Science has left an immutable mark on my soul just as gaming and 
-                martial arts has gifted me. Nothiing could bring me mire joy than to 
-                provide the world with the same sense of wonder and awe that I've experienced through the medium of technology.
-            </p>
+          <p>
+            "I'm a part time level 20 wizard and front-end developer with a scorching passion for creating beautiful
+            and
+            functional websites. Science has left an immutable mark on my soul just as gaming and
+            martial arts has gifted me. Nothiing could bring me more joy than to
+            provide the world with the same sense of wonder and awe that I've experienced through the medium of
+            technology."
+          </p>
         </div>
       </div>
-    </div>
-  </section>
 
+
+  </section>
   <!-- Contact Section -->
   <section class="contact-section bg-white" id="contact">
     <div class="container">
@@ -231,59 +208,43 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label for="name">Name</label>
-                <input class="form-control" 
-                        id="name" 
-                        name="name" 
-                        type="text" 
-                        placeholder="Guy Guyerson" 
-                        required="required" 
-                        data-validation-required-message="Please enter your name." 
-                        required autofocus
-                        autocomplete="on"/>
+                <input class="form-control" id="name" name="name" type="text" placeholder="Guy Guyerson"
+                  required="required" data-validation-required-message="Please enter your name." required
+                  autocomplete="on" />
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label for="email">Email Address</label>
-                <input class="form-control" 
-                        id="email" 
-                        name="email" 
-                        type="email" 
-                        placeholder="Thatguy@gmail.com" 
-                        required="required" 
-                        data-validation-required-message="Please enter your email address."
-                        autocomplete="on" />
+                <input class="form-control" id="email" name="email" type="email" placeholder="Thatguy@gmail.com"
+                  required="required" data-validation-required-message="Please enter your email address."
+                  autocomplete="on" />
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label for="phone">Phone Number</label>
-                <input class="form-control" 
-                        id="phone" 
-                        name="phone" 
-                        type="tel" 
-                        placeholder="+1 (555) 555-5555" 
-                        required="required" 
-                        data-validation-required-message="Please enter your phone number."
-                        autocomplete="on" />    
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="+1 (555) 555-5555"
+                  required="required" data-validation-required-message="Please enter your phone number."
+                  autocomplete="on" />
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label for="text">Message</label>
-                <textarea class="form-control" 
-                          id="text" 
-                          rows="5" 
-                          name="message" 
-                          placeholder="Please let us know your questions or concerns." 
-                          required="required" 
-                          data-validation-required-message="Please let us know you software engineeering needs or concerns about our products."></textarea>
+                <textarea class="form-control" id="text" rows="5" name="message"
+                  placeholder="Please let us know your questions or concerns." required="required"
+                  data-validation-required-message="Please let us know you software engineeering needs or concerns about our products."></textarea>
               </div>
             </div>
             <br>
+
             <div id="success"></div>
             <div class="form-group">
               <button type="submit" class="btn btn-lg d-flex mb-5" id="sendMessageButton">SUBMIT</button>
@@ -304,43 +265,37 @@
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-black  mb-4">Location</h4>
           <p class="lead mb-0"> Metro Detroit Area
-            <br>Michigan</p>
+            <br>Michigan
+          </p>
         </div>
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Connect with Us</h4>
-          <a class="btn btn-outline-dark btn-social mx-1" 
-             href="https://twitter.com/JChrite" 
-             target="_blank">
-            <i class="fa-brands fa-fw fa-twitter">
+          <a class="btn btn-outline-dark btn-social mx-1" href="https://twitter.com/JChrite" target="_blank">
+            <i class="fa-brands fa-fw fa-x-twitter">
             </i>
           </a>
-          <a class="btn btn-outline-dark btn-social mx-1" 
-             href="https://www.linkedin.com/in/jeshawn-chrite"  
-             target="_blank">
+          <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/jeshawn-chrite"
+            target="_blank">
             <i class="fab fa-fw fa-linkedin-in">
             </i>
           </a>
-          <a class="btn btn-outline-dark btn-social mx-1" 
-             href="https://www.linkedin.com/in/daveon-james-007ag"  
-             target="_blank">
+          <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/daveon-james-007ag"
+            target="_blank">
             <i class="fab fa-fw fa-linkedin-in">
             </i>
           </a>
-          <a class="btn btn-outline-dark  btn-social mx-1" 
-             href="https://instagram.com/"
-             target="_blank">
+          <a class="btn btn-outline-dark  btn-social mx-1" href="https://instagram.com/" target="_blank">
             <i class="fa-brands fa-instagram fa-xl">
             </i>
           </a>
-          <a class="btn btn-outline-dark btn-social mx-1" 
-             href="https://youtube.com/"
-             target="_blank">
+          <a class="btn btn-outline-dark btn-social mx-1" href="https://youtube.com/" target="_blank">
             <i class="fa-brands fa-youtube fa-xl">
             </i>
           </a>
         </div>
+
       </div>
     </div>
   </footer>
@@ -354,12 +309,13 @@
 
 
   <!-- Portfolio Modals -->
-  <section>
-  <!-- Beast Modon Modal -->
-    <div class="portfolio-modal modal fade" id="beastModonModal" tabindex="-1" role="dialog" aria-labelledby="beastModonModalLabel" aria-hidden="true">
+  <modalsection>
+    <!-- Beast Modon Modal -->
+    <div class="portfolio-modal modal fade" id="beastModonModal" tabindex="-1" role="dialog"
+      aria-labelledby="beastModonModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">
               <i class="fas fa-times"></i>
             </span>
@@ -370,19 +326,14 @@
                 <div class="col-lg-8">
                   <!-- Portfolio Modal - Title -->
                   <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Beast Modon</h2>
-                  <!-- Icon Divider -->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="divider-custom-line"></div>
-                  </div>
                   <!-- Portfolio Modal - Image -->
                   <img class="img-fluid rounded mb-5 img1" src="/images/BeastModonScreenshot1.png" alt="">
                   <!-- Portfolio Modal - Text -->
-                  <p class="mb-5">Beast Modon is Psycho Studios' first project, a labor of love for fans of hip hop, shootem' ups and weapons... Lots of weapons. Made with Unity via C# and entirely by myself. You can find it on the Google Play Store, App Store, or Steam (click below). Turn your Beast Mode on... You're going to need it.</p>
-                  <a href="https://store.steampowered.com/app/917810/Beast_Modon/">
+                  <p class="mb-5">Beast Modon is Psycho Studios' first project, a labor of love for fans of hip hop,
+                    shootem' ups and weapons... Lots of weapons. Made with Unity via C# and entirely by myself. You can
+                    find it on the Google Play Store, App Store, or Steam (click below). Turn your Beast Mode on...
+                    You're going to need it.</p>
+                  <a href="https://store.steampowered.com/app/917810/Beast_Modon/" target="_blank">
                     <button class="btn btn-primary">
                       Download Here!
                     </button>
@@ -394,32 +345,61 @@
         </div>
       </div>
     </div>
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <i class="fas fa-times"></i>
-          </span>
-        </button>
-        <div class="modal-body text-center">
-          <div class="container">
-            <div class="row justify-content-center">
+    <!-- portfolioModal2  -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog"
+      aria-labelledby="CloudStridersModal" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">UNTITLED MASTERPEIECE </h2>
+                  <!-- Portfolio Modal - Image -->
+                  <img class="img-fluid rounded mb-5 img1" src="/images/ComingSoon.png" alt="">
+                  <!-- Portfolio Modal - Text -->
+                  <p class="mb-5">NEW PROJECT COMING SOON!!!!!!!!!</p>
                 </div>
-                <!-- Portfolio Modal - Text -->
-                <p class="mb-5"></p>
-                <a href="https://store.steampowered.com/app/917810/Beast_Modon/">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-fw"></i>
-                    Download Here!
-                  </button>
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <!-- portfolioModal3  -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog"
+      aria-labelledby="CloudStridersModal" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">UNTITLED MASTERPEIECE </h2>
+                  <!-- Portfolio Modal - Image -->
+                  <img class="img-fluid rounded mb-5 img1" src="/images/ComingSoon.png" alt="">
+                  <!-- Portfolio Modal - Text -->
+                  <p class="mb-5">NEW PROJECT COMING SOON!!!!!!!!!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </modalsection>
 
   <script src="/js/index.js"></script>
 

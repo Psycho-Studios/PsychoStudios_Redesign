@@ -7,15 +7,19 @@
   padding: 1.5rem 0;
   color: #000;
   font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
+  font-size: $Nav-link-size;
+  font-weight: $h3-font-weight;
   a.navbar-brand {
     color: white;
+    font-size: 1.5rem;
     transition: $hover-transition;
     &:hover {
       color: $secondary;
     }
+    span {
+      color: $secondary;
+    }
   }
-}
 
 .navbar-nav {
   margin-top: 1rem;
@@ -24,7 +28,7 @@
   }
   li.nav-item {
     font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
+    font-weight: $h3-font-weight;
     a.nav-link {
       color: white;
       transition: $hover-transition;
@@ -37,89 +41,9 @@
       }
       &.active {
         color: $primary;
+        }
       }
     }
   }
-}
-// nabar toggler button styling
-#navBtn {
-  border: white;
-  transition: $toggler-hover-transition;
-  // .navbar-toggler-icon {
-  //   background-image: none; // Remove default background-image if exists
-  //   position: relative;
-  //   width: 30px; // Width of the hamburger
-  //   height: 2px; // Height of one line
-  //   background-color: white; // Color of the hamburger
-  //   transition: transform 0.5s; // Smooth transformation
 
-  //   &::before,
-  //   &::after {
-  //     content: "";
-  //     position: absolute;
-  //     width: 100%;
-  //     height: 2px; // Height of one line
-  //     background-color: white; // Color of the lines
-  //     transition: transform 0.5s; // Smooth transformation
-  //   }
-
-  //   &::before {
-  //     top: -10px; // Position the top line
-  //   }
-
-  //   &::after {
-  //     top: 10px; // Position the bottom line
-  //   }
-  // }
-
-  // &.toggled .navbar-toggler-icon {
-  //   transform: rotate(135deg); // Rotate the middle line for "X"
-
-  //   &::before {
-  //     transform: rotate(90deg) translate(-10px, 0); // Rotate and move the top line to form "X"
-  //   }
-
-  //   &::after {
-  //     transform: rotate(90deg) translate(-10px, 0); // Rotate and move the bottom line to form "X"
-  //   }
-  // }
-  &:hover {
-    box-shadow: 0 0 0 0.2rem white;
-    border-color: white;
-  }
-  .navbar-toggler-icon {
-    fill: white;
-  }
-}
-
-// media-breakpoint-up(lg) {
-//   #mainNav {
-//     padding-top: 1.5rem;
-//     padding-bottom: 1.5rem;
-//     transition: padding-top 0.3s, padding-bottom 0.3s;
-//     .navbar-brand {
-//       font-size: 1.75em;
-//       transition: font-size 0.3s;
-//     }
-//     .navbar-nav {
-//       margin-top: 0;
-//     }
-//     .navbar-nav > li.nav-item > a.nav-link.active {
-//       color: white;
-//       background: $primary;
-//       &:active,
-//       &:focus,
-//       &:hover {
-//         color: white;
-//         background: $primary;
-//       }
-//     }
-//   }
-//   #mainNav.navbar-shrink {
-//     padding-top: 0.5rem;
-//     padding-bottom: 0.5rem;
-//     .navbar-brand {
-//       font-size: 1.5em;
-//     }
-//   }
-// }
+};

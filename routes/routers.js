@@ -16,19 +16,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 dotenv.config(); // to use the .env file
-process.env.port = "443"; //Production value, use '0' when in lower environment (lol this is technically Github, a "side" environment)
-
-export const router = express.Router(); // router functNions created and exported
+const PORT = process.env.PORT || 3000; // port number
+export const router = express.Router(); // router functions created and exported
 
 const transporter = nodemailer.createTransport({
-  host: "target",
+  host: "smtp.gmail.com",
   port: 587,
   secure: false,
-  service: "gmail",
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD,
   },
+  tls: {
+    minVersion: "TLSv1.2"},
 });
 
 // Routes that handle the different views of the website
@@ -54,7 +54,7 @@ router.post(
     check("message", "Message is required").not().isEmpty(),
   ],
   async (req, res) => {
-    const errors = validationResult(req);
+    const errors =  await validationResult(req);
     if (!errors.isEmpty()) {
       log(errors, "One or more fields are not correctly filled");
       return res.redirect("/failure");
@@ -76,7 +76,6 @@ router.post(
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           log(error);
-          log("From line 76");
           res.redirect("/failure");
         } else {
           console.log("Email sent: " + info.response);
