@@ -128,7 +128,7 @@ h6 {
 
 .masthead {
   background-color: #57a7f1;
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(1rem + 3vh);
   padding-bottom: 6rem;
 }
 .masthead .masthead-heading {
