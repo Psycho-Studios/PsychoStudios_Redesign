@@ -76,13 +76,13 @@ h6 {
 }
 .about-section h2 {
   font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
   margin-bottom: 2rem;
 }
 .about-section h3 {
   color: rgba(243, 243, 243, 0.801);
   font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.25rem, 2vw + 1rem, 4rem);
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
   margin: 1rem 0 0 0;
 }
 .about-section .about-image {
@@ -97,7 +97,7 @@ h6 {
 
 .contact-heading {
   font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
 }
 
 .floating-label-form-group {
@@ -208,7 +208,7 @@ h6 {
 }
 .portfolio .portfolio-heading {
   font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
   margin-bottom: 2rem;
 }
 .portfolio .portfolio-item {
@@ -219,6 +219,11 @@ h6 {
   margin-bottom: 30px;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+.portfolio .portfolio-item h4 {
+  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
+  color: rgb(108, 117, 125);
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;

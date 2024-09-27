@@ -16,6 +16,11 @@
     margin-bottom: 30px;
     border-radius: $border-radius;
     overflow: hidden;
+    h4{
+      font: $headings-font-family;
+      font-size: $H4-font-size;
+      color: rgb(108 117 125);
+    }
     .portfolio-item-caption {
       position: absolute;
       top: 0;
@@ -23,6 +28,7 @@
       transition: 700ms;
       opacity: 0;
       background-color: fade-out($primary, .1);
+
       &:hover {
         opacity: 1;
       }
