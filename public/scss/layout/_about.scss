@@ -9,6 +9,12 @@
         font-size: $H2-font-size;
         margin-bottom: 2rem;
     }
+    h3 {
+        color: $gray;
+        font: $headings-font-family;
+        font-size: $H4-font-size;
+        margin: 1rem 0 0 0;
+    }
     .about-image {
         width: 80%;
         border-radius: 100%;

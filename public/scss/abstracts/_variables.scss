@@ -4,7 +4,7 @@
 $blue: #57a7f1 !default;
 $dark-blue: #57a7f18a !default;
 $yellow: #ffeb3a !default;
-$gray: rgb(243, 243, 243) !default;
+$gray: rgba(243, 243, 243, 0.801) !default;
 
 // Override Bootstrap primary and secondary colors
 $primary: $blue !default;
@@ -14,6 +14,7 @@ $secondary: $yellow !default;
 $H1-font-size: clamp(1rem, 8vw + 1rem, 10rem) !default;
 $H2-font-size: clamp(0.75rem, 6vw + 1rem, 8rem) !default;
 $H3-font-size: clamp(0.50rem, 4vw + 1rem, 6rem) !default;
+$H4-font-size: clamp(0.25rem, 2vw + 1rem, 4rem) !default;
 
 // Override Bootstrap Paragraph size
 $p-font-size: clamp(1rem, 1.25vw + 1rem, 3rem) !default;
