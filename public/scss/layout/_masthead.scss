@@ -10,6 +10,7 @@
     background-size: 200% 200%;
     transition: background-position 1ms;
     border-radius: 20px;
+    font-family: $headings-font-family;
     font-size: $H1-font-size;
     background-clip: text;
       -webkit-background-clip: text;
@@ -20,6 +21,7 @@
   }
   
   p {
+    font-family: $font-family-sans-serif;
     font-size: $p-font-size;
     color: $gray;
   }

@@ -23,12 +23,11 @@ $p-font-size: clamp(1rem, 1.25vw + 1rem, 2rem) !default;
 $Nav-link-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem) !default;
 
 // Override Bootstrap font variables
-$font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$headings-font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+$font-family-sans-serif: "play", sans-serif, !default;
+
+$headings-font-family: "Press Start 2P","Montserrat", system-ui,  -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+  "Apple Color Emoji",!default;
 
 $h1-font-weight: 900 !default;
 $h2-font-weight: 800 !default;

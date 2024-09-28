@@ -3,11 +3,12 @@
 // Styling for the contact section
 
 .contact-heading {
-    font: $headings-font-family;
+    font-family: $headings-font-family;
     font-size: $H2-font-size;
 }
 
 .floating-label-form-group {
+  font-family: $font-family-sans-serif;
   position: relative;
   border-bottom: 3px solid  #0f0f0f00;
   background-color: #1b1313f8,fade-out($color: #f3f1f1, $amount: 0);
@@ -16,6 +17,7 @@
 .form-group {
 
   button {
+    font-family: $headings-font-family;
     margin: 0 auto;
     background-color: $blue;
     color:white;

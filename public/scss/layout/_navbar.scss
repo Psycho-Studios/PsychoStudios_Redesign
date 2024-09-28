@@ -11,6 +11,7 @@
   font-weight: $h3-font-weight;
   a.navbar-brand {
     color: white;
+    font-family: $headings-font-family;
     font-size: $Nav-link-size;
     transition: $hover-transition;
     &:hover {
