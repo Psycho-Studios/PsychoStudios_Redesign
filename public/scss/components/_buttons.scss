@@ -10,7 +10,7 @@
 #btn-cta2 {
   background-color: $secondary;
   color: rgb(255, 255, 255);
-  font-size: 1.8rem;
+  font-size: $H4-font-size;
   text-shadow: 2px 2px 2px #000000;
   transition: $hover-transition;
   &:hover {
