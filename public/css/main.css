@@ -174,7 +174,7 @@ h6 {
 .masthead p {
   font-family: "play", sans-serif;
   font-size: clamp(1rem, 1.25vw + 1rem, 2rem);
-  color: rgba(243, 243, 243, 0.87);
+  color: rgb(252, 252, 252);
 }
 .masthead .masthead-avatar {
   width: clamp(15rem, 50vw, 30rem);
