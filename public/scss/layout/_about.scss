@@ -12,8 +12,12 @@
     h3 {
         color: $gray;
         font-family: $headings-font-family;
+        font-size: $H3-font-size;
+    }
+    h4 {
+        font-family: $headings-font-family;
         font-size: $H4-font-size;
-        margin: 1rem 0 0 0;
+        margin: 0.5rem 0;
     }
     p {
         font-family: $font-family-sans-serif;
