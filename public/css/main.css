@@ -190,6 +190,9 @@ h6 {
   padding-top: calc(1rem + 3vh);
   padding-bottom: 6rem;
 }
+.masthead h1 {
+  font-weight: 900;
+}
 .masthead .masthead-heading {
   background: radial-gradient(closest-side, #ffeb3a, white);
   background-size: 200% 200%;
@@ -312,11 +315,10 @@ h6 {
 }
 .jumbotron .failure-btn {
   background-color: #57a7f1;
-  color: white;
   transition: ease-in-out 0.3s;
 }
 .jumbotron .failure-btn:hover {
-  background-color: #1175d1;
+  background-color: #288eed;
   color: white;
   transform: scale(1.5);
 }

@@ -5,6 +5,9 @@
   background-color: #57a7f1;
   padding-top: calc(1rem + 3vh);
   padding-bottom: 6rem;
+   h1 {
+    font-weight: $h1-font-weight;
+   }
   .masthead-heading {
     background: radial-gradient(closest-side, $secondary, white);
     background-size: 200% 200%;
