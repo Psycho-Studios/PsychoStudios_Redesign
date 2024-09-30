@@ -301,26 +301,46 @@ h6 {
   font-size: 1.5rem;
 }
 
+.jumbotron h1 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-weight: 900;
+}
+.jumbotron p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
 .jumbotron .failure-btn {
-  margin: 0 auto;
   background-color: #57a7f1;
   color: white;
   transition: ease-in-out 0.3s;
 }
 .jumbotron .failure-btn:hover {
-  background-color: rgba(87, 167, 241, 0.5411764706);
+  background-color: #1175d1;
+  color: white;
+  transform: scale(1.5);
 }
 
 .feedback-footer {
   margin-top: 29em;
 }
 
+.jumbotron h1 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-weight: 900;
+}
+.jumbotron p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
 .jumbotron .success-btn {
-  margin: 0 auto;
   background-color: #57a7f1;
   color: white;
   transition: ease-in-out 0.3s;
 }
 .jumbotron .success-btn:hover {
-  background-color: rgba(87, 167, 241, 0.5411764706);
+  background-color: #1175d1;
+  color: white;
+  transform: scale(1.5);
 }
