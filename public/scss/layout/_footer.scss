@@ -5,6 +5,14 @@
   padding-bottom: 5rem;
   background-color: $secondary;
   color: black;
+  h4{
+    font-family: $headings-font-family;
+    font-size: $H4-font-size;
+  }
+  p {
+    font-family: $font-family-sans-serif;
+    font-size: $p-font-size;
+  }
 }
 .fa-brands , .fab {
 a.btn {
@@ -16,6 +24,7 @@ a.btn {
 }
 .copyright {
   background-color: darken($secondary, 8%);
-  color: #000;
+  font-family: $font-family-sans-serif;
+  
 }
 

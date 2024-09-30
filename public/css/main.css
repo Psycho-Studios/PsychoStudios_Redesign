@@ -46,7 +46,8 @@ h6 {
 #btn-cta2 {
   background-color: #ffeb3a;
   color: rgb(255, 255, 255);
-  font-size: 1.8rem;
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
   text-shadow: 2px 2px 2px #000000;
   transition: all 0.9s ease-in-out;
 }
@@ -54,7 +55,7 @@ h6 {
 #btn-cta2:hover {
   background-color: #d3be00;
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .btn-social {
@@ -63,10 +64,28 @@ h6 {
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: all 0.9s ease-in-out, transform 0.6s ease-in-out;
+  transition: all 0.9s ease-in-out, transform 0.3s ease-in-out;
 }
 .btn-social:hover {
-  transform: scale(1.3);
+  transform: scale(1.6);
+}
+
+.portfolio-modal .modal-body h2 {
+  font-family: "play", sans-serif;
+}
+.portfolio-modal .modal-body p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
+.portfolio-modal .modal-body .btn-modal {
+  background-color: #57a7f1;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.portfolio-modal .modal-body .btn-modal:hover {
+  background-color: #1175d1;
+  color: white;
+  transform: scale(1.5);
 }
 
 .about-section {
@@ -75,32 +94,49 @@ h6 {
   padding-bottom: 3rem;
 }
 .about-section h2 {
-  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
-  margin-bottom: 2rem;
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
+  margin: 3rem;
+}
+.about-section h3 {
+  color: rgba(243, 243, 243, 0.87);
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.5rem, 3vw + 1rem, 6rem);
+}
+.about-section h4 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
+  margin: 0.5rem 0;
+}
+.about-section p {
+  font-family: "play", sans-serif;
+  font-size: clamp(0.5rem, 1.25vw + 1rem, 1.5rem);
+  text-align: left;
 }
 .about-section .about-image {
-  width: 80%;
+  width: 65%;
   border-radius: 100%;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 .about-section .about-image:hover {
-  transform: scale(1.1);
+  transform: scale(0.8);
 }
 
 .contact-heading {
-  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
 }
 
 .floating-label-form-group {
+  font-family: "play", sans-serif;
   position: relative;
   border-bottom: 3px solid rgba(15, 15, 15, 0);
   background-color: rgba(27, 19, 19, 0.9725490196), #f3f1f1;
 }
 
 .form-group button {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
   margin: 0 auto;
   background-color: #57a7f1;
   color: white;
@@ -110,11 +146,34 @@ h6 {
   background-color: rgba(87, 167, 241, 0.5411764706);
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.btn-bounce:hover {
+  animation: bounce 2s infinite;
+}
+
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #ffeb3a;
   color: black;
+}
+.footer h4 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
+}
+.footer p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
 }
 
 .fa-brands a.btn.hover, .fab a.btn.hover {
@@ -123,20 +182,24 @@ h6 {
 
 .copyright {
   background-color: #ffe711;
-  color: #000;
+  font-family: "play", sans-serif;
 }
 
 .masthead {
   background-color: #57a7f1;
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(1rem + 3vh);
   padding-bottom: 6rem;
+}
+.masthead h1 {
+  font-weight: 900;
 }
 .masthead .masthead-heading {
   background: radial-gradient(closest-side, #ffeb3a, white);
   background-size: 200% 200%;
   transition: background-position 1ms;
   border-radius: 20px;
-  font-size: clamp(1rem, 8vw + 1rem, 12rem);
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(1rem, 8vw + 1rem, 10rem);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -145,8 +208,9 @@ h6 {
   /* For Safari */
 }
 .masthead p {
-  font-size: clamp(1rem, 1.25vw + 1rem, 3rem);
-  color: rgb(243, 243, 243);
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+  color: rgb(252, 252, 252);
 }
 .masthead .masthead-avatar {
   width: clamp(15rem, 50vw, 30rem);
@@ -156,15 +220,16 @@ h6 {
 #mainNav {
   background-color: #49a0f0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
   color: #000;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(1rem, 1.25vw + 0.75rem, 2rem);
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem);
   font-weight: 700;
 }
 #mainNav a.navbar-brand {
   color: white;
-  font-size: 1.5rem;
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem);
   transition: all 0.9s ease-in-out;
 }
 #mainNav a.navbar-brand:hover {
@@ -180,7 +245,7 @@ h6 {
   color: #57a7f1;
 }
 #mainNav .navbar-nav li.nav-item {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
   font-weight: 700;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
@@ -201,8 +266,8 @@ h6 {
   margin: 3rem 0;
 }
 .portfolio .portfolio-heading {
-  font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: clamp(0.75rem, 6vw + 1rem, 8rem);
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.75rem, 4vw + 1rem, 8rem);
   margin-bottom: 2rem;
 }
 .portfolio .portfolio-item {
@@ -213,6 +278,16 @@ h6 {
   margin-bottom: 30px;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+.portfolio .portfolio-item h4 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
+  color: rgb(108, 117, 125);
+}
+.portfolio .portfolio-item p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+  color: rgb(135, 136, 136);
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
@@ -229,26 +304,45 @@ h6 {
   font-size: 1.5rem;
 }
 
+.jumbotron h1 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-weight: 900;
+}
+.jumbotron p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
 .jumbotron .failure-btn {
-  margin: 0 auto;
   background-color: #57a7f1;
-  color: white;
   transition: ease-in-out 0.3s;
 }
 .jumbotron .failure-btn:hover {
-  background-color: rgba(87, 167, 241, 0.5411764706);
+  background-color: #288eed;
+  color: white;
+  transform: scale(1.5);
 }
 
 .feedback-footer {
-  margin-top: 29em;
+  margin-top: 20em;
 }
 
+.jumbotron h1 {
+  font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
+  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-weight: 900;
+}
+.jumbotron p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
 .jumbotron .success-btn {
-  margin: 0 auto;
   background-color: #57a7f1;
   color: white;
   transition: ease-in-out 0.3s;
 }
 .jumbotron .success-btn:hover {
-  background-color: rgba(87, 167, 241, 0.5411764706);
+  background-color: #1175d1;
+  color: white;
+  transform: scale(1.5);
 }

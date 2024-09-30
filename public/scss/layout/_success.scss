@@ -1,16 +1,28 @@
-@use '../abstracts/variables' as v;
+@use '../abstracts/variables' as *;
 .feedback-footer {
-    margin-top: 29em;
+    margin-top: 20em;
 }
-
 .jumbotron {
+    h1 {
+        font-family: $headings-font-family;
+        font-size: $H1-font-size;
+        font-weight: $h1-font-weight;
+    }
+
+    p {
+        font-family: $font-family-sans-serif;
+        font-size: $p-font-size;
+    }
+
     .success-btn {
-        margin: 0 auto;
-        background-color: v.$blue;
+        background-color: #57a7f1;
         color: white;
         transition: ease-in-out 0.3s;
+
         &:hover {
-          background-color: v.$dark-blue;;
+            background-color: darken(#57a7f1, 20%);
+            color: white;
+            transform: scale(1.5);
         }
-    };
-};
+    }
+}

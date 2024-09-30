@@ -28,7 +28,8 @@ const transporter = nodemailer.createTransport({
     pass: process.env.PASSWORD,
   },
   tls: {
-    minVersion: "TLSv1.2"},
+    rejectUnauthorized: true,
+  },
 });
 
 // Routes that handle the different views of the website

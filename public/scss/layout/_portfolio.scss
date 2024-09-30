@@ -4,7 +4,7 @@
 .portfolio {
   margin: 3rem 0;
   .portfolio-heading {
-    font: $headings-font-family;
+    font-family: $headings-font-family;
     font-size: $H2-font-size;
     margin-bottom: 2rem;
   }
@@ -16,6 +16,16 @@
     margin-bottom: 30px;
     border-radius: $border-radius;
     overflow: hidden;
+    h4{
+      font-family: $headings-font-family;
+      font-size: $H4-font-size;
+      color: rgb(108 117 125);
+    }
+    p {
+      font-family: $font-family-sans-serif;
+      font-size: $p-font-size;
+      color: rgb(135, 136, 136);
+    }
     .portfolio-item-caption {
       position: absolute;
       top: 0;
@@ -23,6 +33,7 @@
       transition: 700ms;
       opacity: 0;
       background-color: fade-out($primary, .1);
+
       &:hover {
         opacity: 1;
       }

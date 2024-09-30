@@ -19,6 +19,11 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
 
   <!-- Custom fonts for this theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="text/css">
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
     type="text/css">
@@ -77,7 +82,7 @@
       <h1 class="masthead-heading text-uppercase my-5">Psycho Studios</h1>
       <p>"We're here to solve your engineering and gaming needs"</p>
       <div class="row gap-2">
-        <a href="#portfolio" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta1">Browse our games</a>
+        <a href="#portfolio" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta1">Browse Projects</a>
         <a href="#contact" class="col-lg-4 btn mx-auto my-4 text-uppercase" id="btn-cta2">Contact Us</a>
       </div>
     </div>
@@ -85,7 +90,7 @@
 
   <!-- Portfolio Section -->
   <section class="portfolio-section bg-white portfolio" id="portfolio">
-    <div class="container">
+    <div class="container-fluid">
 
       <!-- Portfolio Section Heading -->
       <h2 class="portfolio-heading text-center text-uppercase text-secondary ">Current Projects</h2>
@@ -95,7 +100,7 @@
       <div class="row">
 
         <!-- Portfolio Item 1 -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-lg-4">
           <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#beastModonModal">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -103,11 +108,13 @@
               </div>
             </div>
             <img class="img-fluid" src="/images/BeastModonScreenshot1.png" alt="">
+            <h4 class="my-3">Beast Modon</h4>
+            <p>Old school - technically no because you don't have to lose a mountain of quarters to win.</p>
           </div>
         </div>
 
         <!-- Portfolio Item 2  -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-lg-4">
           <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -115,11 +122,13 @@
               </div>
             </div>
             <img class="img-fluid" src="/images/ComingSoon.png" alt="">
+            <h4 class="my-3"> Secret Gaming Project</h4>
+            <p>It'll have your head in the clouds.</p>
           </div>
         </div>
 
         <!-- portfolio Item 3  -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-lg-4">
           <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -127,6 +136,8 @@
               </div>
             </div>
             <img class="img-fluid" src="/images/ComingSoon.png" alt="">
+            <h4 class="my-3">The Emporium</h4>
+            <p>Where you can purchase items beyond your wildest dreams</p>
           </div>
         </div>
 
@@ -135,11 +146,11 @@
     </div>
   </section>
   <!-- About Section -->
-  <section class="about-section page-section text-white p-3" id="about">
+  <section class="about-section page-section text-white" id="about">
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">About Us</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-white pt-4">About</h2>
 
 
       <!-- About Section Content -->
@@ -147,7 +158,7 @@
         Small: 348px x 348px 
         Medium: 696px x 696px
         Large: 1392px x 1392px-->
-      <div class="row m-5">
+      <div class="row">
         <div class="col-lg-6">
           <img class="about-image img-fluid" src="/images/JeshawnChrite_selfie.png" srcset="/images/JeshawnChrite_selfie-348w.png 348w,
                       /images/JeshawnChrite_selfie-696w.png 696w,
@@ -162,7 +173,7 @@
           </h3>
           <h4>Lead Game Developer</h4>
           <p>
-            "I believe video games are art. They become timeless with enough effort and care.
+            " I believe video games are art. They become timeless with enough effort and care.
             It is my mission to make games that inspire others to follow their dreams and
             make the world a better place with their own creativity, dedication, and grit.
             I felt the muse of video game development ever since I was a child and will not
@@ -170,7 +181,7 @@
           </p>
         </div>
       </div>
-      <div class="row m-5">
+      <div class="row">
         <div class="col-lg-6">
           <img class="about-image img-fluid" src="/images/PSProfilePic.png" alt="DaVeon James Profile Pic">
         </div>
@@ -180,10 +191,10 @@
           </h3>
           <h4>Lead Front-End Developer</h4>
           <p>
-            "I'm a part time level 20 wizard and front-end developer with a scorching passion for creating beautiful
+            " I'm a part time level 19 wizard and front-end developer with a scorching passion for creating beautiful
             and
             functional websites. Science has left an immutable mark on my soul just as gaming and
-            martial arts has gifted me. Nothiing could bring me more joy than to
+            martial arts has gifted me. Nothing could bring me more joy than to
             provide the world with the same sense of wonder and awe that I've experienced through the medium of
             technology."
           </p>
@@ -247,7 +258,7 @@
 
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-lg d-flex mb-5" id="sendMessageButton">SUBMIT</button>
+              <button type="submit" class="btn btn-lg btn-bounce d-flex mb-5" id="sendMessageButton">SUBMIT</button>
             </div>
           </form>
         </div>
@@ -276,17 +287,17 @@
             <i class="fa-brands fa-fw fa-x-twitter">
             </i>
           </a>
-          <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/jeshawn-chrite"
+          <a class="btn btn-outline-dark btn-social mx-1 mb-1" href="https://www.linkedin.com/in/jeshawn-chrite"
             target="_blank">
             <i class="fab fa-fw fa-linkedin-in">
             </i>
           </a>
-          <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/daveon-james-007ag"
+          <a class="btn btn-outline-dark btn-social mx-1 mb-1" href="https://www.linkedin.com/in/daveon-james-007ag"
             target="_blank">
             <i class="fab fa-fw fa-linkedin-in">
             </i>
           </a>
-          <a class="btn btn-outline-dark  btn-social mx-1" href="https://instagram.com/" target="_blank">
+          <a class="btn btn-outline-dark  btn-social mx-1 mb-1" href="https://instagram.com/" target="_blank">
             <i class="fa-brands fa-instagram fa-xl">
             </i>
           </a>
@@ -325,17 +336,18 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Beast Modon</h2>
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-2">Beast Modon</h2>
                   <!-- Portfolio Modal - Image -->
-                  <img class="img-fluid rounded mb-5 img1" src="/images/BeastModonScreenshot1.png" alt="">
+                  <img class="img-fluid rounded mb-2 img1" src="/images/BeastModonScreenshot1.png" alt="">
                   <!-- Portfolio Modal - Text -->
-                  <p class="mb-5">Beast Modon is Psycho Studios' first project, a labor of love for fans of hip hop,
+                  <p class="mb-2 text-start">Beast Modon is Psycho Studios' first project, a labor of love for fans of
+                    hip hop,
                     shootem' ups and weapons... Lots of weapons. Made with Unity via C# and entirely by myself. You can
                     find it on the Google Play Store, App Store, or Steam (click below). Turn your Beast Mode on...
                     You're going to need it.</p>
                   <a href="https://store.steampowered.com/app/917810/Beast_Modon/" target="_blank">
-                    <button class="btn btn-primary">
-                      Download Here!
+                    <button class="btn btn-primary btn-modal">
+                      Download Here !
                     </button>
                   </a>
                 </div>
@@ -360,11 +372,12 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">UNTITLED MASTERPEIECE </h2>
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">UNTITLED MASTERPIECE</h2>
                   <!-- Portfolio Modal - Image -->
                   <img class="img-fluid rounded mb-5 img1" src="/images/ComingSoon.png" alt="">
                   <!-- Portfolio Modal - Text -->
-                  <p class="mb-5">NEW PROJECT COMING SOON!!!!!!!!!</p>
+                  <p class="mb-5 text-start">Get ready for a game that will leave you in the stratosphere after
+                    experiencing it.</p>
                 </div>
               </div>
             </div>
@@ -387,11 +400,13 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <!-- Portfolio Modal - Title -->
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">UNTITLED MASTERPEIECE </h2>
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Emporium</h2>
                   <!-- Portfolio Modal - Image -->
                   <img class="img-fluid rounded mb-5 img1" src="/images/ComingSoon.png" alt="">
                   <!-- Portfolio Modal - Text -->
-                  <p class="mb-5">NEW PROJECT COMING SOON!!!!!!!!!</p>
+                  <p class="mb-5 text-start">Brojou's Emporium ran with his lifelong friend Huffalus.
+                    Welcome to a magic shop filled to capacity with items obtained from the adventures had by the party.
+                  </p>
                 </div>
               </div>
             </div>
