@@ -64,7 +64,7 @@ h6 {
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: all 0.9s ease-in-out, transform 0.7s ease-in-out;
+  transition: all 0.9s ease-in-out, transform 0.3s ease-in-out;
 }
 .btn-social:hover {
   transform: scale(1.6);
