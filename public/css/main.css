@@ -70,6 +70,24 @@ h6 {
   transform: scale(1.6);
 }
 
+.portfolio-modal .modal-body h2 {
+  font-family: "play", sans-serif;
+}
+.portfolio-modal .modal-body p {
+  font-family: "play", sans-serif;
+  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+}
+.portfolio-modal .modal-body .btn-modal {
+  background-color: #57a7f1;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.portfolio-modal .modal-body .btn-modal:hover {
+  background-color: #1175d1;
+  color: white;
+  transform: scale(1.5);
+}
+
 .about-section {
   background-color: hsl(209, 85%, 64%);
   font-size: 1.5em;
