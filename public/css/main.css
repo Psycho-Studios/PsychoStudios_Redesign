@@ -53,11 +53,22 @@ h6 {
 }
 #btn-cta1:hover,
 #btn-cta2:hover {
-  background-color: #d3be00;
+  animation: darken-lighten 2s infinite;
   color: white;
   transform: scale(1.5);
 }
 
+@keyframes darken-lighten {
+  0% {
+    background-color: #ffeb3a;
+  }
+  50% {
+    background-color: #d3be00;
+  }
+  100% {
+    background-color: #ffeb3a;
+  }
+}
 .btn-social {
   border-radius: 100%;
   display: inline-flex;

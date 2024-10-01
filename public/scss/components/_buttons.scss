@@ -15,12 +15,25 @@
   text-shadow: 2px 2px 2px #000000;
   transition: $hover-transition;
   &:hover {
-    background-color: darken($secondary, 20%);
+    animation: darken-lighten 2s infinite;
     color: white;
     transform: scale(1.5);
   }
 }
+// Keyframes for darken and lighten animation
+@keyframes darken-lighten {
+  0% {
+    background-color: $secondary;
+  }
 
+  50% {
+    background-color: darken($secondary, 20%);
+  }
+
+  100% {
+    background-color: $secondary;
+  }
+}
 // Custom social buttons
 .btn-social {
   border-radius: 100%;
