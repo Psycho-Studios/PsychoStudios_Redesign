@@ -357,3 +357,8 @@ h6 {
   color: white;
   transform: scale(1.5);
 }
+
+.privacy-policy {
+  background-color: rgb(255, 230.8578680203, 17.2);
+  font-family: "play", sans-serif;
+}
