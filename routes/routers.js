@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import { dirname } from "path";
 import express from "express";
 import { google } from "googleapis";
-import {readline } from "readline";
+import readline from "readline";
 
 import { fileURLToPath } from "url";
 import path from "path";
@@ -110,6 +110,7 @@ router.post(
           console.log('Refresh Token:', token.refresh_token);
           // Save the token to your environment variables or a secure storage
         });
+      });
 
       const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
       let rawBody = makeBody(
