@@ -53,18 +53,29 @@ h6 {
 }
 #btn-cta1:hover,
 #btn-cta2:hover {
-  background-color: #d3be00;
+  animation: darken-lighten 2s infinite;
   color: white;
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
+@keyframes darken-lighten {
+  0% {
+    background-color: #ffeb3a;
+  }
+  50% {
+    background-color: #d3be00;
+  }
+  100% {
+    background-color: #ffeb3a;
+  }
+}
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: all 0.9s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out, transform 0.4s ease-in-out;
 }
 .btn-social:hover {
   transform: scale(1.6);
@@ -83,7 +94,7 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 .portfolio-modal .modal-body .btn-modal:hover {
-  background-color: #1175d1;
+  background-color: rgb(17.3846153846, 116.7252747253, 208.6153846154);
   color: white;
   transform: scale(1.5);
 }
@@ -181,7 +192,7 @@ h6 {
 }
 
 .copyright {
-  background-color: #ffe711;
+  background-color: rgb(255, 230.8578680203, 17.2);
   font-family: "play", sans-serif;
 }
 
@@ -218,7 +229,7 @@ h6 {
 }
 
 #mainNav {
-  background-color: #49a0f0;
+  background-color: rgb(72.8769230769, 159.6021978022, 239.8230769231);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   padding: 0.5rem 0;
   color: #000;
@@ -318,7 +329,7 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 .jumbotron .failure-btn:hover {
-  background-color: #288eed;
+  background-color: rgb(39.9230769231, 142.3406593407, 237.0769230769);
   color: white;
   transform: scale(1.5);
 }
@@ -342,7 +353,12 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 .jumbotron .success-btn:hover {
-  background-color: #1175d1;
+  background-color: rgb(17.3846153846, 116.7252747253, 208.6153846154);
   color: white;
   transform: scale(1.5);
+}
+
+.privacy-policy{
+  background-color: rgb(255, 230.8578680203, 17.2);
+  font-family: "play", sans-serif;
 }

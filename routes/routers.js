@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { dirname } from "path";
 import express from "express";
 import nodemailer from "nodemailer";
+import { google } from "googleapis";
 
 import { fileURLToPath } from "url";
 import path from "path";
@@ -19,22 +20,51 @@ dotenv.config(); // to use the .env file
 const PORT = process.env.PORT || 3000; // port number
 export const router = express.Router(); // router functions created and exported
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
-  },
-  tls: {
-    rejectUnauthorized: true,
-  },
-});
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
+const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
+
+const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+async function createTransporter(){
+  try
+  {
+    const accessToken = await oAuth2Client.getAccessToken();
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      service: "gmail",
+      auth: {
+        type: 'OAuth2',
+        user: process.env.SMTP_EMAIL,
+        clientId: CLIENT_ID,
+        clientSecret: CLIENT_SECRET,
+        refreshToken: REFRESH_TOKEN,
+        accessToken: accessToken.token,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+
+    return transporter;
+  }
+  catch(error){
+    console.error(error);
+  }
+}
 
 // Routes that handle the different views of the website
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../views/index.html"));
+});
+
+router.get("/privacypolicy", (req, res) =>{
+  res.sendFile(path.join(__dirname, "../views/privacypolicy.html"));
 });
 
 router.get("/failure", (req, res) => {
@@ -61,7 +91,12 @@ router.post(
       return res.redirect("/failure");
     }
 
-    try {
+   try {
+      const transporter = await createTransporter();
+      if (!transporter) {
+        throw new Error("Failed to create transporter");
+      }
+      
       // Takes user data and creates a mailOptions object for nodemailer
       const { name, email, phone, message } = req.body;
 
@@ -85,7 +120,7 @@ router.post(
       });
       log("user data:", req.body);
     } catch (error) {
-      log.error(error);
+      console.error(error);
       res.redirect("/failure");
     }
   }
