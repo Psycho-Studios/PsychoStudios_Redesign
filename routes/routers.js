@@ -3,8 +3,8 @@ import { check, validationResult } from "express-validator";
 import dotenv from "dotenv";
 import { dirname } from "path";
 import express from "express";
-import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import {readline } from "readline";
 
 import { fileURLToPath } from "url";
 import path from "path";
@@ -25,37 +25,28 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
-const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+function makeBody(to, from, subject, message) {
+  var str = [
+    'Content-Type: text/html; charset="UTF-8"\n',
+    "MIME-Version: 1.0\n",
+    "Content-Transfer-Encoding: 7bit\n",
+    "to: ",
+    to,
+    "\n",
+    "from: ",
+    from,
+    "\n",
+    "subject: ",
+    subject,
+    "\n\n",
+    message,
+  ].join("");
 
-async function createTransporter(){
-  try
-  {
-    const accessToken = await oAuth2Client.getAccessToken();
-
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      service: "gmail",
-      auth: {
-        type: 'OAuth2',
-        user: process.env.SMTP_EMAIL,
-        clientId: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        refreshToken: REFRESH_TOKEN,
-        accessToken: accessToken.token,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    });
-
-    return transporter;
-  }
-  catch(error){
-    console.error(error);
-  }
+  var encodedMail = new Buffer(str)
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_");
+  return encodedMail;
 }
 
 // Routes that handle the different views of the website
@@ -91,35 +82,57 @@ router.post(
       return res.redirect("/failure");
     }
 
-   try {
-      const transporter = await createTransporter();
-      if (!transporter) {
-        throw new Error("Failed to create transporter");
-      }
-      
+   try {      
       // Takes user data and creates a mailOptions object for nodemailer
-      const { name, email, phone, message } = req.body;
-
-      const mailOptions = {
-        from: req.body.email,
-        to: process.env.EMAIL,
-        subject: "New Message from PsychoStudios.com",
-        contactInfo: req.body.phone + " " + req.body.name,
-        text: req.body.message,
-      };
-
-      // logic that handles transportation and errors
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          log(error);
-          res.redirect("/failure");
-        } else {
-          console.log("Email sent: " + info.response);
-          res.redirect("/success");
-        }
+      const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET, 'https://www.psychostudios.net/oauth2callback');
+      oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+      
+      const authUrl = oAuth2Client.generateAuthUrl({
+        access_type: 'offline',
+        scope: ['https://www.googleapis.com/auth/gmail.send'],
       });
-      log("user data:", req.body);
-    } catch (error) {
+
+      console.log('Authorize this app by visiting this url:', authUrl);
+
+      const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+      });
+      
+      rl.question('Enter the code from that page here: ', (code) => {
+        rl.close();
+        oAuth2Client.getToken(code, (err, token) => {
+          if (err) {
+            return console.error('Error retrieving access token', err);
+          }
+          oAuth2Client.setCredentials(token);
+          console.log('Access Token:', token.access_token);
+          console.log('Refresh Token:', token.refresh_token);
+          // Save the token to your environment variables or a secure storage
+        });
+
+      const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
+      let rawBody = makeBody(
+        process.env.EMAIL, //Receiver
+        req.body.email, //Sender
+        "New Message via PsychoStudios.com from: " + req.body.name + " with phone number: " + req.body.phone, //Subject
+        req.body.message // Message
+      );
+      const response = await gmail.users.messages.send({
+        userId: 'me',
+        resource: { rawBody },
+      });
+      if (response.error) {
+        log(response.error);
+        res.redirect("/failure");
+      } 
+      else {
+        console.log("Email sent: " + info.response);
+        res.redirect("/success");
+      }
+      // logic that handles transportation and errors
+    } 
+    catch (error) {
       console.error(error);
       res.redirect("/failure");
     }
