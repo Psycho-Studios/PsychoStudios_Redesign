@@ -53,18 +53,29 @@ h6 {
 }
 #btn-cta1:hover,
 #btn-cta2:hover {
-  background-color: rgb(211, 189.578680203, 0);
+  animation: darken-lighten 2s infinite;
   color: white;
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
+@keyframes darken-lighten {
+  0% {
+    background-color: #ffeb3a;
+  }
+  50% {
+    background-color: #d3be00;
+  }
+  100% {
+    background-color: #ffeb3a;
+  }
+}
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: all 0.9s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out, transform 0.4s ease-in-out;
 }
 .btn-social:hover {
   transform: scale(1.6);
@@ -345,9 +356,4 @@ h6 {
   background-color: rgb(17.3846153846, 116.7252747253, 208.6153846154);
   color: white;
   transform: scale(1.5);
-}
-
-.privacy-policy {
-  background-color: rgb(255, 230.8578680203, 17.2);
-  font-family: "play", sans-serif;
 }

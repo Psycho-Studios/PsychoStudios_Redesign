@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-// Custom extra larg button size
+// Custom extra large button size
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
@@ -15,12 +15,25 @@
   text-shadow: 2px 2px 2px #000000;
   transition: $hover-transition;
   &:hover {
-    background-color: darken($secondary, 20%);
+    animation: darken-lighten 2s infinite;
     color: white;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
+// Keyframes for darken and lighten animation
+@keyframes darken-lighten {
+  0% {
+    background-color: $secondary;
+  }
 
+  50% {
+    background-color: darken($secondary, 22%);
+  }
+
+  100% {
+    background-color: $secondary;
+  }
+}
 // Custom social buttons
 .btn-social {
   border-radius: 100%;
@@ -30,7 +43,7 @@
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: $hover-transition, transform 0.3s ease-in-out;
+  transition: $hover-transition, transform 0.4s ease-in-out;
   &:hover {
     transform: scale(1.6);
   }
