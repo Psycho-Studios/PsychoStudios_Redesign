@@ -25,7 +25,7 @@
   
   p {
     font-family: $font-family-sans-serif;
-    font-size: $p-font-size;
+    font-size: clamp(1rem, 1.25vw + 1rem, 2rem);
     color: rgb(252 252 252);;
   }
   .masthead-avatar {

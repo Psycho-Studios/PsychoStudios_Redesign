@@ -49,7 +49,7 @@ h6 {
   font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
   font-size: clamp(0.25rem, 1vw + 1rem, 3rem);
   text-shadow: 3px 3px 3px #000000;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 #btn-cta1:hover,
 #btn-cta2:hover {
@@ -75,7 +75,7 @@ h6 {
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  transition: all 0.9s ease-in-out, transform 0.4s ease-in-out;
+  transition: all 0.7s ease-in-out, transform 0.4s ease-in-out;
 }
 .btn-social:hover {
   transform: scale(1.6);
@@ -210,7 +210,7 @@ h6 {
   transition: background-position 1ms;
   border-radius: 20px;
   font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
-  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-size: clamp(1rem, 8vw + 1rem, 8rem);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -220,7 +220,7 @@ h6 {
 }
 .masthead p {
   font-family: "play", sans-serif;
-  font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+  font-size: clamp(1rem, 1.25vw + 1rem, 2rem);
   color: rgb(252, 252, 252);
 }
 .masthead .masthead-avatar {
@@ -241,7 +241,7 @@ h6 {
   color: white;
   font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
   font-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem);
-  transition: all 0.9s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 #mainNav a.navbar-brand:hover {
   color: #ffeb3a;
@@ -261,7 +261,7 @@ h6 {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: white;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   color: #ffeb3a;
@@ -317,7 +317,7 @@ h6 {
 
 .jumbotron h1 {
   font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
-  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-size: clamp(1rem, 8vw + 1rem, 8rem);
   font-weight: 900;
 }
 .jumbotron p {
@@ -340,7 +340,7 @@ h6 {
 
 .jumbotron h1 {
   font-family: "Press Start 2P", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji";
-  font-size: clamp(1rem, 8vw + 1rem, 10rem);
+  font-size: clamp(1rem, 8vw + 1rem, 8rem);
   font-weight: 900;
 }
 .jumbotron p {
